@@ -90,9 +90,6 @@ export let formValidate = {
             } else {
                 this.removeError(formRequiredItem);
             }
-        } else if (formRequiredItem.type === "checkbox" && !formRequiredItem.checked) {
-            this.addError(formRequiredItem);
-            error++;
         } else {
             if (!formRequiredItem.value) {
                 this.addError(formRequiredItem);
@@ -131,22 +128,6 @@ export let formValidate = {
                 el.parentElement.classList.remove("_form-focus");
                 el.classList.remove("_form-focus");
                 formValidate.removeError(el);
-            }
-            let checkboxes = form.querySelectorAll(".checkbox__input");
-            if (checkboxes.length > 0) {
-                for (let index = 0; index < checkboxes.length; index++) {
-                    const checkbox = checkboxes[index];
-                    checkbox.checked = false;
-                }
-            }
-            if (flsModules.select) {
-                let selects = form.querySelectorAll(".select");
-                if (selects.length) {
-                    for (let index = 0; index < selects.length; index++) {
-                        const select = selects[index].querySelector("select");
-                        flsModules.select.selectBuild(select);
-                    }
-                }
             }
         }, 0);
     },

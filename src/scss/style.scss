@@ -59,24 +59,25 @@ $responsiveType: 1;
 
 body {
     // Скролл заблокирован
+    @include scrollbars(rem(10), $red, $blue);
     background-color: $lightWhite;
     .lock & {
         overflow: hidden;
         touch-action: none;
     }
     // Сайт загружен
-    .loaded & {
-        .header__top,
-        .header__middle,
-        .header__bottom,
-        .main-page__top,
-        .main-page__block-info,
-        .main-page__slider,
-        .page__pagination,
-        .main-page__map {
-            @extend .anim;
-        }
-    }
+    // .loaded & {
+    //     .header__top,
+    //     .header__middle,
+    //     .header__bottom,
+    //     .main-page__top,
+    //     .main-page__block-info,
+    //     .main-page__slider,
+    //     .page__pagination,
+    //     .main-page__map {
+    //         @extend .anim;
+    //     }
+    // }
 }
 
 // Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
@@ -163,7 +164,7 @@ body {
         padding-top: rem(80);
     }
     &__pagination {
-        padding: rem(20) 0px;
+        padding: rem(20) rem(15);
     }
     &__main {
         padding: rem(20) 0px;

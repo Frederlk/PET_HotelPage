@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="footer__container">
-        <div class="footer__top top-footer" data-spollers="479.98,max" data-watch data-watch-once>
+        <div class="footer__top top-footer" data-spollers="479.98,max" data-one-spoller data-watch data-watch-once>
             <div class="top-footer__column top-footer__column_1">
                 <a href="#" class="top-footer__logo">
                     <img src="@img/logo-footer.svg" alt="logo" />
@@ -30,9 +30,7 @@
                     <li><a href="#" class="top-footer__link footer-link">Promote your Business on BTP</a></li>
                 </ul>
                 <div class="top-footer__socials">
-                    <div class="top-footer__label top-footer__label_social footer-label _spoller-active" data-spoller>
-                        Social Network
-                    </div>
+                    <div class="top-footer__label top-footer__label_social footer-label" data-spoller>Social Network</div>
                     <ul class="top-footer__list">
                         <a href="#" class="top-footer__social-item _icon-fb"></a>
                         <a href="#" class="top-footer__social-item _icon-yt"></a>
@@ -80,7 +78,7 @@
                             autocomplete="off"
                             type="text"
                             name="name"
-                            data-required=""
+                            data-required
                             data-error="Error"
                             placeholder="Your Full Name*"
                             class="bottom-footer__input input"
@@ -91,22 +89,24 @@
                             autocomplete="off"
                             type="text"
                             name="phone"
-                            data-required=""
+                            data-required
                             data-error="Error"
                             placeholder="Phone Number*"
                             class="bottom-footer__input input"
                         />
                     </div>
                 </div>
-                <textarea
-                    autocomplete="off"
-                    type="text"
-                    name="message"
-                    data-required=""
-                    data-error="Error"
-                    placeholder="Message*"
-                    class="bottom-footer__textarea input"
-                ></textarea>
+                <div class="bottom-footer__textarea-wrap">
+                    <textarea
+                        autocomplete="off"
+                        type="text"
+                        data-required
+                        data-error="Error"
+                        name="message"
+                        placeholder="Message"
+                        class="bottom-footer__textarea input"
+                    ></textarea>
+                </div>
                 <div class="bottom-footer__bottom">
                     <button type="submit" class="bottom-footer__btn btn">Send</button>
                     <div class="bottom-footer__tip">* Required Fields</div>

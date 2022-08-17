@@ -76,35 +76,20 @@
             @media (max-width: $tablet) {
                 flex: 0 1 20%;
             }
-            @media (max-width: $mobile) {
-                flex: 0 1 50%;
+            @media (max-width: $mobileSmall) {
+                flex: 0 0 rem(114) !important;
             }
-        }
-        @media (max-width: $mobileSmall) {
-            flex: 1 1 100%;
         }
         &_2 {
-            @media (max-width: $mobile) {
-                flex: 0 1 50%;
-            }
-        }
-        @media (max-width: $mobileSmall) {
-            flex: 1 1 100%;
         }
         &_3 {
             flex: 1 1 auto;
-            @media (max-width: $mobile) {
-                flex: 0 1 50%;
-            }
-        }
-        @media (max-width: $mobileSmall) {
-            flex: 1 1 100%;
         }
         &_4 {
             flex: 0 1 percent(225, 1100);
-            @media (max-width: $mobile) {
-                flex: 0 1 50%;
-            }
+        }
+        @media (max-width: $mobile) {
+            flex: 0 1 50%;
         }
         @media (max-width: $mobileSmall) {
             flex: 1 1 100%;
@@ -113,7 +98,6 @@
 
     &__logo {
         display: flex;
-
         img {
             max-width: 100%;
         }
@@ -196,11 +180,11 @@
             align-items: center;
         }
         .top-footer__list {
-            display: flex;
         }
     }
 
     &__social-item {
+        display: inline-flex;
         font-size: rem(24);
         color: $grey2;
         transition: color 0.3s ease 0s;
@@ -294,6 +278,11 @@
     }
 
     &__form {
+        .form__error {
+            @extend %text_2;
+            color: $red;
+            margin-top: rem(5);
+        }
     }
 
     &__row {
@@ -326,8 +315,11 @@
         min-height: rem(50);
     }
 
-    &__textarea {
+    &__textarea-wrap {
         margin-bottom: rem(20);
+    }
+
+    &__textarea {
         min-height: rem(125);
     }
 
@@ -351,14 +343,12 @@
 }
 
 .copy-footer {
-    &__body {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @media (max-width: $mobile) {
-            padding-bottom: rem(20);
-        }
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: $mobile) {
+        padding-bottom: rem(20);
     }
 
     &__licence {

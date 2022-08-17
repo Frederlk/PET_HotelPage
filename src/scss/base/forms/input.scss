@@ -21,12 +21,14 @@ textarea {
         outline: white solid rem(1);
     }
     &._form-focus {
+        color: $darkGrey;
     }
     &._form-error {
-        color: red;
+        color: $red;
     }
 }
+
 textarea.input {
     resize: none;
-    padding: 0px 0px;
+    padding: rem(18) rem(23);
 }
