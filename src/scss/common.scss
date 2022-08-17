@@ -1,0 +1,29 @@
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.text_1 {
+    font-size: 10px;
+    line-height: 13 / 10 * 100%;
+}
+
+.text_2 {
+    font-size: 14px;
+    line-height: 18 / 14 * 100%;
+}
+
+.text_3 {
+    font-size: 12px;
+    line-height: 15 / 12 * 100%;
+}
+
+.h1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30 / 24 * 100%;
+}
+.no-anim {
+    visibility: hidden;
+    opacity: 0;
+}
+.anim {
+    visibility: visible;
+    opacity: 1;
+}
