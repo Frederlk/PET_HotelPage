@@ -1,0 +1,468 @@
+//====================================================================================================
+.header {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	@media (max-width: $md3+px) {
+		position: fixed;
+	}
+	&__wrapper {
+	}
+
+	&__top {
+		@extend .no-anim;
+		transition: all 0.5s ease 0s;
+	}
+
+	&__middle {
+		@extend .no-anim;
+		transition: all 0.5s ease 0.3s;
+	}
+
+	&__bottom {
+		@extend .no-anim;
+		transition: all 0.5s ease 0.6s;
+	}
+}
+.top-header {
+	background-color: $lightWhite;
+	&__container {
+	}
+
+	&__body {
+		min-height: 60px;
+		display: flex;
+		align-items: center;
+		@media (max-width: $md3+px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	&__questions {
+		flex: 1 1 auto;
+		font-weight: 700;
+		@extend .text_1;
+		color: $darkGrey;
+		margin: 0px 20px 0px 0px;
+		display: flex;
+		span {
+			margin: 0px 5px 0px 0px;
+		}
+		a {
+			color: inherit;
+			font-weight: 400;
+			transition: all 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+		@media (max-width: $md3+px) {
+			font-size: 14px;
+			margin: 0;
+			flex: 1 1 100%;
+			justify-content: center;
+			padding: 10px 0px;
+		}
+		@media (max-width: $md4+px) {
+			flex-wrap: wrap;
+			text-align: center;
+			a {
+				flex: 1 1 100%;
+				margin: 10px 0px 0px 0px;
+			}
+		}
+	}
+
+	&__gift {
+		display: flex;
+		align-items: center;
+		@extend .text_1;
+		color: $darkGrey;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $red;
+			}
+		}
+		@include adaptiv-value("margin-right", 100, 40, 1);
+		&::before {
+			margin-right: 20px;
+			font-size: 18px;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 14px;
+			padding: 10px 0px;
+		}
+		@media (max-width: $md4+px) {
+			flex: 1 1 100%;
+			justify-content: center;
+			margin-right: 0;
+		}
+	}
+
+	&__loyality {
+		display: flex;
+		align-items: center;
+		@extend .text_1;
+		color: $darkGrey;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $red;
+			}
+		}
+		&::before {
+			margin-right: 20px;
+			font-size: 18px;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 14px;
+			padding: 10px 0px;
+		}
+		@media (max-width: $md4+px) {
+			flex: 1 1 100%;
+			justify-content: center;
+		}
+	}
+}
+.middle-header {
+	position: relative;
+	z-index: 10;
+	background-color: $white;
+	&__container {
+	}
+
+	&__body {
+		min-height: 120px;
+		display: flex;
+		align-items: center;
+		position: relative;
+		@media (max-width: $md3+px) {
+			min-height: 80px;
+		}
+	}
+
+	&__logo {
+		flex: 0 0 177px;
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: $md4+px) {
+			flex: 0 0 140px;
+		}
+	}
+
+	&__search-form {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: center;
+		@include adaptiv-value("margin-left", 100, 20, 1);
+		@media (max-width: $md2+px) {
+			justify-content: flex-end;
+			&._active {
+				.middle-header__input {
+					opacity: 1;
+					visibility: visible;
+					top: 80%;
+				}
+				.middle-header__btn {
+					opacity: 1;
+					visibility: visible;
+					top: 80%;
+				}
+				.middle-header__icon-search {
+					color: $red;
+				}
+			}
+		}
+	}
+
+	&__input {
+		background-color: $lightWhite;
+		border-radius: 6px;
+		min-height: 40px;
+		padding: 5px 75px 5px 25px;
+		flex: 0 0 350px;
+		@media (max-width: $md2+px) {
+			position: absolute;
+			width: 100%;
+			top: 0%;
+			left: 0;
+			transition: all 0.3s ease 0s;
+			opacity: 0;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+			z-index: 2;
+			visibility: hidden;
+		}
+	}
+
+	&__btn {
+		background-color: $red;
+		min-height: 40px;
+		justify-content: center;
+		align-items: center;
+		color: $white;
+		flex: 0 0 65px;
+		border-radius: 0px 6px 6px 0px;
+		margin: 0px 0px 0px -65px;
+		transition: all 0.3s ease 0s;
+		@media (max-width: $md2+px) {
+			transition: all 0.3s ease 0s;
+			opacity: 0;
+			position: absolute;
+			width: 65px;
+			top: 0%;
+			right: 0px;
+			z-index: 2;
+			visibility: hidden;
+		}
+		@media (max-width: $md3+px) {
+			flex: 0 0 40px;
+			margin: 0;
+		}
+		&::before {
+			font-size: 16px;
+			color: $white;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $blue;
+			}
+		}
+	}
+	&__icon-search {
+		display: none;
+		@media (max-width: $md2+px) {
+			display: block;
+			transition: all 0.3s ease 0s;
+			font-size: 24px;
+			@include adaptiv-value("margin-right", 40, 20, 1);
+		}
+	}
+
+	&__cart {
+		flex: 0 0 34px;
+		display: flex;
+		position: relative;
+		margin-top: 10px;
+		@include adaptiv-value("margin-right", 50, 20, 1);
+		@media (any-hover: hover) {
+			&:hover {
+				.middle-header__cart-number {
+					background-color: $blue;
+				}
+			}
+		}
+	}
+
+	&__cart-icon {
+		font-size: 24px;
+		color: $darkGrey;
+		transition: all 0.3s ease 0s;
+	}
+
+	&__cart-number {
+		position: absolute;
+		right: 0;
+		top: -50%;
+		transition: all 0.3s ease 0s;
+		border-radius: 50%;
+		width: 20px;
+		height: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $red;
+		color: $white;
+		@extend .text_1;
+		font-weight: 600;
+	}
+
+	&__login {
+		display: flex;
+		flex: 0 0 150px;
+		align-items: center;
+		color: $darkGrey;
+		@media (any-hover: hover) {
+			&:hover {
+				&::after {
+					transform: rotate(-180deg);
+				}
+			}
+		}
+		&::after {
+			font-size: 8px;
+			@include adaptiv-value("margin-left", 18, 5, 1);
+			transition: all 0.3s ease 0s;
+		}
+		@media (max-width: 575px) {
+			flex: 1 1 100%;
+			justify-content: center;
+			padding: 10px 0px;
+		}
+	}
+
+	&__image {
+		border-radius: 50%;
+		overflow: hidden;
+		flex: 0 0 40px;
+		height: 40px;
+		margin: 0px 18px 0px 0px;
+	}
+
+	&__name {
+		@extend .text_2;
+	}
+
+	&__icon {
+	}
+}
+.bottom-header {
+	background-color: $blue;
+	&__container {
+	}
+
+	&__body {
+	}
+
+	&__menu {
+	}
+
+	&__wrapper {
+	}
+}
+.menu {
+	&__wrapper {
+		@media (max-width: $md3+px) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0px;
+			left: 0;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.5s ease 0s;
+			overflow: auto;
+			&._active {
+				visibility: visible;
+				opacity: 1;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background-color: $blue;
+				opacity: 0.3;
+			}
+		}
+	}
+
+	&__body {
+		min-height: 80px;
+		display: flex;
+		align-items: center;
+		@media (max-width: $md3+px) {
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+			padding: 100px 15px 30px 15px;
+			background-color: $blue;
+			overflow: auto;
+			flex-wrap: wrap;
+			.top-header {
+				flex: 1 1 100%;
+				margin: 0px -15px;
+			}
+		}
+		@media (max-width: $md4+px) {
+			height: 100%;
+		}
+	}
+
+	&__list {
+		@media (min-width: $md3+px) {
+			flex: 1 1 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin: 0px -10px;
+		}
+		li {
+			@media (min-width: $md3+px) {
+				padding: 0px 10px;
+			}
+			@media (max-width: $md3+px) {
+				@include adaptiv-value("margin-bottom", 40, 20, 1);
+			}
+		}
+	}
+
+	&__link {
+		@extend .text_2;
+		text-transform: uppercase;
+		color: $white;
+		font-weight: 700;
+		transition: all 0.3s ease 0s;
+		@media (max-width: $md3+px) {
+			font-size: 16px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+}
+
+.icon-menu {
+	display: none;
+	@media (max-width: $md3+px) {
+		display: block;
+		position: relative;
+		top: 0px;
+		right: 0px;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 15;
+		span {
+			transition: all 0.3s ease 0s;
+			top: calc(50% - 1px);
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: $darkGrey;
+			&:first-child {
+				top: 0px;
+			}
+			&:last-child {
+				top: auto;
+				bottom: 0px;
+			}
+		}
+		&._active {
+			span {
+				transform: scale(0);
+				&:first-child {
+					transform: rotate(-45deg);
+					top: calc(50% - 1px);
+				}
+				&:last-child {
+					transform: rotate(45deg);
+					bottom: calc(50% - 1px);
+				}
+			}
+		}
+	}
+}
+//====================================================================================================
