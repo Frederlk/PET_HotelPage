@@ -1,30 +1,19 @@
 //<BUTTONS (a.btn+tab)>
 // Снипет (HTML): btn
 
-.button {
-    display: inline-flex;
-    padding: 0px 0px;
-    @media (any-hover: hover) {
-        &:hover {
-        }
-    }
-    &._fw {
-        width: 100%;
-    }
-}
 .btn {
     display: inline-flex;
-    padding: 5px 15px;
+    padding: rem(5) rem(15);
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease 0s;
+    transition: backgorund-color 0.3s ease 0s;
+    @extend %text_2;
     font-family: "Nunito";
     font-weight: 600;
-    @extend .text_2;
     background-color: $red;
     color: $white;
-    border: 2px solid $red;
-    border-radius: 4px;
+    border: rem(2) solid $red;
+    border-radius: rem(4);
     @media (any-hover: hover) {
         &:hover {
             background-color: transparent;

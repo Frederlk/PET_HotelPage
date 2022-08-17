@@ -26,6 +26,7 @@ $darkGrey: #333333;
 $red: #ec1f46;
 $blue: #0a223d;
 $grey: #c4c4c4;
+$grey2: #bdbdbd;
 $mainColor: $darkGrey; // Цвет шрифта по умолчанию
 
 // НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
@@ -157,32 +158,31 @@ body {
 //========================================================================================================================================================
 
 .page {
-    padding: 260px 0px 0px 0px;
-    flex: 1 1 auto;
-    @media (max-width: $md3+px) {
-        padding: 80px 0px 0px 0px;
+    padding-top: rem(260);
+    @media (max-width: $mobile) {
+        padding-top: rem(80);
     }
     &__pagination {
-        padding: 20px 0px;
+        padding: rem(20) 0px;
     }
     &__main {
-        padding: 20px 0px;
+        padding: rem(20) 0px;
     }
     &__package {
-        padding: 50px 0px 0px 0px;
+        padding-top: rem(50);
     }
     &__products {
-        @include adaptiv-value("padding-top", 68, 18, 1);
-        @include adaptiv-value("padding-bottom", 40, 20, 1);
+        @include adaptiveValue("padding-top", 68, 18, 1110, 767.98, 1);
+        @include adaptiveValue("padding-bottom", 40, 20, 1110, 767.98, 1);
     }
     &__testi {
-        padding: 40px 0px 0px 0px;
-        padding: 0px 0px 70px 0px;
+        padding-top: rem(40);
+        padding-bottom: rem(70);
     }
     &__newsletter {
     }
     &__popular {
-        @include adaptiv-value("padding-top", 60, 40, 1);
-        @include adaptiv-value("padding-bottom", 70, 30, 1);
+        @include adaptiveValue("padding-top", 60, 40, 1110, 767.98, 1);
+        @include adaptiveValue("padding-bottom", 70, 30, 1110, 767.98, 1);
     }
 }

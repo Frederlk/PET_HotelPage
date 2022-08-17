@@ -1,139 +1,127 @@
 .footer-label {
     font-weight: 700;
-    font-size: 18px;
-    line-height: 23 / 18 * 100%;
+    font-size: rem(18);
+    line-height: math.div(23, 18);
     color: $white;
     text-transform: uppercase;
 }
+
 .footer-link {
     display: flex;
-    font-size: 14px;
     line-height: 160%;
-    color: #bdbdbd;
-    transition: all 0.3s ease 0s;
+    color: $grey2;
+    transition: color 0.3s ease 0s;
     @media (any-hover: hover) {
         &:hover {
             color: $red;
         }
     }
-    @media (max-width: $md3+px) {
-        font-size: 16px;
-        margin-bottom: 5px;
+    @media (max-width: $mobile) {
+        font-size: rem(16);
+        margin-bottom: rem(5);
     }
-    @media (max-width: $md4+px) {
-        font-size: 20px;
+    @media (max-width: $mobileSmall) {
+        font-size: rem(20);
     }
 }
 
-.footer {
-    &__wrapper {
-        @include adaptiv-value("padding-top", 110, 40, 1);
-        padding-bottom: 45px;
-        background-color: $blue;
-    }
+//========================================================================================================================================================
 
+.footer {
+    @include adaptiveValue("padding-top", 110, 40, 1110, 767.98, 1);
+    padding-bottom: rem(45);
+    background-color: $blue;
     &__container {
     }
 
-    &__body {
-    }
-
     &__top {
-        display: flex;
-        justify-content: space-between;
-        margin: 0px -10px;
-        @include adaptiv-value("margin-bottom", 65, 35, 1);
-        @media (max-width: $md3+px) {
-            @include adaptiv-value("margin-bottom", 30, 15, 1);
-            flex-wrap: wrap;
-        }
-
-        @extend .no-anim;
-        transition: all 0.5s ease 0s;
-        &._animate {
-            @extend .anim;
-        }
+        // @extend %no-anim;
+        // transition: all 0.5s ease 0s;
+        // &._animate {
+        //     @extend %anim;
+        // }
     }
     &__bottom {
-        display: flex;
-        justify-content: space-between;
-        margin: 0px -10px;
-        @include adaptiv-value("margin-bottom", 65, 35, 1);
-        @media (max-width: $md3+px) {
-            flex-wrap: wrap;
-        }
-
-        @extend .no-anim;
-        transition: all 0.5s ease 0s;
-        &._animate {
-            @extend .anim;
-        }
+        // @extend %no-anim;
+        // transition: all 0.5s ease 0s;
+        // &._animate {
+        //     @extend %anim;
+        // }
     }
     &__copy {
-        @extend .no-anim;
-        transition: all 0.5s ease 0s;
-        &._animate {
-            @extend .anim;
-        }
+        // @extend %no-anim;
+        // transition: all 0.5s ease 0s;
+        // &._animate {
+        //     @extend %anim;
+        // }
     }
 }
+
 .top-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px rem(-10);
+    @include adaptiveValue("margin-bottom", 65, 35, 1110, 767.98, 1);
+    @media (max-width: $mobile) {
+        @include adaptiveValue("margin-bottom", 30, 15, 1110, 767.98, 1);
+        flex-wrap: wrap;
+    }
     &__column {
-        padding: 0px 10px;
+        padding: 0px rem(10);
         flex: 0 1 25%;
-        margin: 0px 0px 30px 0px;
-        @media (max-width: $md4+px) {
-            margin: 0px;
+        @media (min-width: $mobileSmall) {
+            margin-bottom: rem(30);
         }
         &_1 {
-            @media (max-width: $md2+px) {
+            @media (max-width: $tablet) {
                 flex: 0 1 20%;
             }
-            @media (max-width: $md3+px) {
+            @media (max-width: $mobile) {
                 flex: 0 1 50%;
             }
         }
-        @media (max-width: $md4+px) {
+        @media (max-width: $mobileSmall) {
             flex: 1 1 100%;
         }
         &_2 {
-            @media (max-width: $md3+px) {
+            @media (max-width: $mobile) {
                 flex: 0 1 50%;
             }
         }
-        @media (max-width: $md4+px) {
+        @media (max-width: $mobileSmall) {
             flex: 1 1 100%;
         }
         &_3 {
             flex: 1 1 auto;
-            @media (max-width: $md3+px) {
+            @media (max-width: $mobile) {
                 flex: 0 1 50%;
             }
         }
-        @media (max-width: $md4+px) {
+        @media (max-width: $mobileSmall) {
             flex: 1 1 100%;
         }
         &_4 {
-            flex: 0 1 225 / 1100 * 100%;
-            @media (max-width: $md3+px) {
+            flex: 0 1 percent(225, 1100);
+            @media (max-width: $mobile) {
                 flex: 0 1 50%;
             }
         }
-        @media (max-width: $md4+px) {
+        @media (max-width: $mobileSmall) {
             flex: 1 1 100%;
         }
     }
 
     &__logo {
         display: flex;
-        @media (min-width: $md3+px) {
-            margin: 30px 0px 0px 0px;
-        }
+
         img {
             max-width: 100%;
         }
-        @media (max-width: $md4+px) {
-            margin: 0px 0px 40px 0px;
+        @media (min-width: $mobile) {
+            margin-top: rem(30);
+        }
+        @media (max-width: $mobileSmall) {
+            margin-bottom: rem(40);
             img {
                 max-width: 100px;
             }
@@ -141,46 +129,46 @@
     }
 
     &__label {
-        margin-bottom: 15px;
-        @media (max-width: $md4+px) {
-            margin-bottom: 20px;
+        margin-bottom: rem(15);
+        @media (max-width: $mobileSmall) {
+            margin-bottom: rem(20);
         }
         &_social {
             margin-bottom: 0;
-            @include adaptiv-value("margin-right", 45, 30, 1);
-            @media (max-width: $md4+px) {
+            @include adaptiveValue("margin-right", 45, 30, 1110, 767.98, 1);
+            @media (max-width: $mobileSmall) {
                 margin-right: 0;
-                margin-bottom: 20px;
+                margin-bottom: rem(20);
             }
         }
-        @media (max-width: $md4+px) {
+        @media (max-width: $mobileSmall) {
             position: relative;
-            padding: 0px 30px 0px 0px;
-            @media (max-width: $md3+px) {
+            padding-right: rem(30);
+            @media (max-width: $mobile) {
                 &::after {
                     content: "";
-                    width: 16px;
-                    height: 2px;
+                    width: rem(16);
+                    height: rem(2);
                     background-color: $white;
                     position: absolute;
                     top: 50%;
                     right: 0;
-                    transition: all 0.3s ease 0s;
+                    transition: background-color 0.5s ease 0s;
                     transform: translate(0px, -50%);
                 }
                 &::before {
                     content: "";
-                    width: 2px;
-                    height: 16px;
+                    width: rem(2);
+                    height: rem(16);
                     background-color: $white;
                     position: absolute;
                     top: 50%;
-                    right: 7px;
-                    transition: all 0.3s ease 0s;
+                    right: rem(7);
+                    transition: height 0.5s ease 0s, background-color 0.5s ease 0s;
                     transform: translate(0px, -50%);
                 }
             }
-            &._active {
+            &._spoller-active {
                 &::before {
                     height: 0;
                     background-color: $red;
@@ -193,8 +181,8 @@
     }
 
     &__list {
-        @media (max-width: $md4+px) {
-            margin: 0px 0px 20px 0px;
+        @media (max-width: $mobileSmall) {
+            margin-bottom: rem(20);
         }
     }
 
@@ -202,8 +190,8 @@
     }
 
     &__socials {
-        @media (min-width: $md4+px) {
-            margin: 25px 0px 0px 0px;
+        @media (min-width: $mobileSmall) {
+            margin-top: rem(25);
             display: flex;
             align-items: center;
         }
@@ -213,65 +201,62 @@
     }
 
     &__social-item {
-        font-size: 24px;
-        color: #bdbdbd;
-        transition: all 0.3s ease 0s;
+        font-size: rem(24);
+        color: $grey2;
+        transition: color 0.3s ease 0s;
         &:not(:last-child) {
-            margin: 0px 10px 0px 0px;
+            margin-right: rem(10);
         }
         @media (any-hover: hover) {
             &:hover {
                 color: $red;
             }
         }
-        @media (max-width: $md3+px) {
-            font-size: 28px;
+        @media (max-width: $mobile) {
+            font-size: rem(28);
         }
-        @media (max-width: $md4+px) {
-            font-size: 32px;
+        @media (max-width: $mobileSmall) {
+            font-size: rem(32);
         }
     }
 }
 
 .bottom-footer {
-    &__column {
-        flex: 0 1 50%;
-        padding: 0px 10px;
-        margin: 0px 0px 30px 0px;
-        @media (max-width: $md3+px) {
-            margin: 0px 0px 20px 0px;
-            flex: 1 1 100%;
-        }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptiveValue("margin-bottom", 65, 35, 1110, 767.98, 1);
+    @include adaptiveValue("gap", 80, 30, 1110, 767.98, 1);
+    @media (max-width: $mobile) {
+        grid-template-columns: 1fr;
     }
-
     &__info {
     }
 
     &__label {
-        margin-bottom: 25px;
+        margin-bottom: rem(25);
     }
 
     &__text {
-        font-size: 14px;
         line-height: 160%;
-        color: #bdbdbd;
-        margin-bottom: 25px;
+        color: $grey2;
+        margin-bottom: rem(25);
     }
 
-    &__address {
-        @media (max-width: $md4+px) {
-            font-size: 18px;
-        }
-        margin-bottom: 25px;
+    &__address,
+    &__mail {
         align-items: center;
+        margin-bottom: rem(25);
         &::before {
-            margin: 0px 18px 0px 0px;
-            font-size: 19px;
-            flex: 0 0 25px;
+            margin-right: rem(18);
+            font-size: rem(19);
+            flex: 0 0 rem(25);
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            @media (max-width: $md4+px) {
+        }
+        @media (max-width: $mobileSmall) {
+            font-size: rem(18);
+            &::before {
                 display: none;
             }
         }
@@ -279,46 +264,32 @@
 
     &__phones {
         display: flex;
-        margin-bottom: 25px;
-        @media (max-width: $md3+px) {
-            margin-bottom: 0;
+        align-items: flex-start;
+        @media (min-width: $mobile) {
+            margin-bottom: rem(25);
         }
         &::before {
-            margin: 0px 18px 0px 0px;
-            font-size: 23px;
-            flex: 0 0 25px;
-            color: #bdbdbd;
+            margin-right: rem(18);
+            font-size: rem(23);
+            flex: 0 0 rem(25);
+            color: $grey2;
             display: inline-flex;
             justify-content: center;
-            @media (max-width: $md4+px) {
+            @media (max-width: $mobileSmall) {
                 display: none;
             }
         }
     }
-    &__phone-inner {
-    }
 
     &__number {
-        @media (max-width: $md4+px) {
-            font-size: 18px;
+        @media (max-width: $mobileSmall) {
+            font-size: rem(18);
         }
     }
 
     &__mail {
-        @media (max-width: $md4+px) {
-            font-size: 18px;
-        }
-        align-items: center;
         &::before {
-            margin: 0px 18px 0px 0px;
-            font-size: 13px;
-            flex: 0 0 25px;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            @media (max-width: $md4+px) {
-                display: none;
-            }
+            font-size: rem(13);
         }
     }
 
@@ -328,11 +299,11 @@
     &__row {
         display: flex;
         justify-content: space-between;
-        margin: 0px -15px 15px -15px;
-        @media (max-width: $md2+px) {
-            margin: 0px -10px 15px -10px;
+        margin: 0px rem(-15) rem(15) rem(-15);
+        @media (max-width: $tablet) {
+            margin: 0px rem(-10) rem(15) rem(-10);
         }
-        @media (max-width: $md4+px) {
+        @media (max-width: $mobileSmall) {
             flex-wrap: wrap;
             margin: 0;
         }
@@ -340,24 +311,24 @@
 
     &__inp {
         flex: 0 1 50%;
-        padding: 0px 15px;
-        @media (max-width: $md2+px) {
-            padding: 0px 10px;
+        padding: 0px rem(15);
+        @media (max-width: $tablet) {
+            padding: 0px rem(10);
         }
-        @media (max-width: $md4+px) {
+        @media (max-width: $mobileSmall) {
             flex: 1 1 100%;
             padding: 0;
-            margin-bottom: 15px;
+            margin-bottom: rem(15);
         }
     }
 
     &__input {
-        min-height: 50px;
+        min-height: rem(50);
     }
 
     &__textarea {
-        margin: 0px 0px 20px 0px;
-        min-height: 125px;
+        margin-bottom: rem(20);
+        min-height: rem(125);
     }
 
     &__bottom {
@@ -367,14 +338,14 @@
     }
 
     &__btn {
-        margin: 0px 20px 0px 0px;
-        min-height: 50px;
-        min-width: 160px;
+        margin-right: rem(20);
+        min-height: rem(50);
+        min-width: rem(160);
     }
 
     &__tip {
         font-weight: 700;
-        @extend .text_3;
+        @extend %text_3;
         color: #e0e0e0;
     }
 }
@@ -385,16 +356,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        @media (max-width: $md3+px) {
-            padding-bottom: 20px;
+        @media (max-width: $mobile) {
+            padding-bottom: rem(20);
         }
     }
 
     &__licence {
-        @extend .text_3;
+        @extend %text_3;
         color: $white;
-        margin: 0px 5px;
-        transition: all 0.3s ease 0s;
+        margin: 0px rem(5);
+        transition: color 0.3s ease 0s;
         @media (any-hover: hover) {
             &:hover {
                 color: $red;
@@ -405,9 +376,9 @@
     &__pay {
         position: absolute;
         bottom: 0;
-        width: 136px;
+        width: rem(136);
         right: 0;
-        @media (max-width: $md3+px) {
+        @media (max-width: $mobile) {
             right: 50%;
             transform: translate(50%, 100%);
         }

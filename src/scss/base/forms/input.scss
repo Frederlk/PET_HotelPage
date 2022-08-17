@@ -9,11 +9,13 @@ textarea {
     appearance: none;
 }
 .input {
-    border-radius: 0 !important;
+    @extend %text_3;
+    color: $grey2;
     width: 100%;
     display: block;
-    padding: 0px 20px;
-    border: 1px solid #eee;
+    border-radius: rem(4);
+    padding: rem(17) rem(25);
+    transition: color 0.3s ease 0s;
     &:focus-visible {
         outline-offset: rem(-1);
         outline: white solid rem(1);
@@ -27,23 +29,4 @@ textarea {
 textarea.input {
     resize: none;
     padding: 0px 0px;
-}
-//========================================================================================================================================================
-
-.input {
-    @extend .text_3;
-    color: #bdbdbd;
-    width: 100%;
-    display: block;
-    border-radius: 4px;
-    padding: 17px 25px;
-    transition: all 0.3s ease 0s;
-    &._focus {
-        color: $darkGrey;
-    }
-    &._error {
-    }
-}
-textarea.input {
-    resize: none;
 }

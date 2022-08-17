@@ -1,29 +1,54 @@
-//<ОСНОВНОЙ БЛОК>====================================================================================================
-.text_1 {
-    font-size: 10px;
-    line-height: 13 / 10 * 100%;
+%text_1 {
+    font-size: rem(10);
+    line-height: math.div(13, 10);
 }
 
-.text_2 {
-    font-size: 14px;
-    line-height: 18 / 14 * 100%;
+%text_2 {
+    line-height: math.div(18, 14);
 }
 
-.text_3 {
-    font-size: 12px;
-    line-height: 15 / 12 * 100%;
+%text_3 {
+    font-size: rem(12);
+    line-height: math.div(15, 12);
 }
 
-.h1 {
+%h1 {
     font-weight: 700;
-    font-size: 24px;
-    line-height: 30 / 24 * 100%;
+    font-size: rem(24);
+    line-height: math.div(30, 24);
 }
-.no-anim {
+%no-anim {
     visibility: hidden;
     opacity: 0;
 }
-.anim {
+%anim {
     visibility: visible;
     opacity: 1;
+}
+
+//========================================================================================================================================================
+
+.pagination-page {
+    // @extend .no-anim;
+    // transition: all 0.5s ease 0.8s;
+    &__item {
+        color: $blue;
+        @extend .text_1;
+        transition: all 0.3s ease 0s;
+        &:not(:last-child) {
+            &::after {
+                content: "/";
+                color: $blue;
+                margin-left: rem(4);
+            }
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: $red;
+            }
+        }
+        @media (max-width: $mobile) {
+            font-size: rem(12);
+        }
+    }
 }

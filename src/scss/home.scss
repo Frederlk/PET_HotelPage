@@ -1,39 +1,3 @@
-.pagination-page {
-    @extend .no-anim;
-    transition: all 0.5s ease 0.8s;
-    &__container {
-    }
-
-    &__body {
-    }
-
-    &__item {
-        color: $blue;
-        @extend .text_1;
-        transition: all 0.3s ease 0s;
-        &::after {
-            content: "/";
-            color: $blue;
-            margin: 0px 0px 0px 4px;
-        }
-        &:last-child {
-            &::after {
-                display: none;
-            }
-        }
-        @media (any-hover: hover) {
-            &:hover {
-                color: $red;
-            }
-        }
-        @media (max-width: $md3+px) {
-            font-size: 12px;
-        }
-    }
-}
-
-//========================================================================================================================================================
-
 .main-page {
     &__container {
     }
