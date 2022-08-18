@@ -7,8 +7,6 @@
     @media (max-width: $mobile) {
         position: fixed;
     }
-    &__wrapper {
-    }
 
     &__top {
         // @extend %no-anim;
@@ -313,6 +311,7 @@
             visibility: hidden;
             transition: visibility 0.5s ease 0s, opacity 0.5s ease 0s;
             overflow: auto;
+            @include scrollbars(rem(10), $red, $blue);
             .menu-open & {
                 visibility: visible;
                 opacity: 1;

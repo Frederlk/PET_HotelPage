@@ -6,60 +6,61 @@
         <div class="wrapper">
             @@include('html/_header.htm',{})
             <main class="page">
-                <nav class="page__pagination pagination-page __container">
-                    <a href="#" class="pagination-page__item">Home</a>
-                    <a href="#" class="pagination-page__item">Flash Offers</a>
-                    <a href="#" class="pagination-page__item">Grand Hilton Hotel</a>
+                <nav class="page__pagination pagination __container">
+                    <a href="#" class="pagination__item">Home</a>
+                    <a href="#" class="pagination__item">Flash Offers</a>
+                    <a href="#" class="pagination__item">Grand Hilton Hotel</a>
                 </nav>
-                <!-- 
-                <section class="page__main main-page">
-                    <div class="main-page__container">
-                        <div class="main-page__top">
-                            <div class="main-page__info">
-                                <div class="main-page__stars">
+
+                <section class="page__main main">
+                    <div class="main__container">
+                        <div class="main__top">
+                            <div class="main__info">
+                                <div class="main__stars">
                                     <span class="_icon-star"></span>
                                     <span class="_icon-star"></span>
                                     <span class="_icon-star"></span>
                                     <span class="_icon-star"></span>
                                     <span class="_icon-star"></span>
                                 </div>
-                                <div class="main-page__title-inner">
-                                    <h1 class="main-page__title">GRAND HILTON HOTEL</h1>
-                                    <span class="main-page__badge">Flash Offer</span>
+                                <div class="main__title-inner">
+                                    <h1 class="main__title">GRAND HILTON HOTEL</h1>
+                                    <span class="main__badge">Flash Offer</span>
                                 </div>
-                                <div class="main-page__hyperlinks">
-                                    <span class="main-page__link">Half-Board</span>
-                                    <span class="main-page__link">All Inclusive</span>
-                                    <span class="main-page__link">Complimentary Activities</span>
-                                    <span class="main-page__link">Child Stays Free</span>
+                                <div class="main__hyperlinks">
+                                    <span class="main__link">Half-Board</span>
+                                    <span class="main__link">All Inclusive</span>
+                                    <span class="main__link">Complimentary Activities</span>
+                                    <span class="main__link">Child Stays Free</span>
                                 </div>
                             </div>
-                            <div class="main-page__rating">
-                                <div class="main-page__user-rating">User Rattings</div>
-                                <div class="main-page__number"><span>4,5</span>/<span class="main-page__number_all">5</span></div>
+                            <div class="main__rating">
+                                <div class="main__user-rating">User Rattings</div>
+                                <div class="main__number"><span>4,5</span>/<span class="main__number_all">5</span></div>
                             </div>
                         </div>
-                        <div class="main-page__body">
-                            <div class="main-page__slider">
-                                <div class="main-page__swiper swiper">
-                                    <div class="main-page__wrapper swiper-wrapper">
-                                        <div class="main-page__slide-ibg swiper-slide">
+                        <div class="main__body">
+                            <div class="main__slider">
+                                <div class="main__swiper swiper">
+                                    <div class="main__wrapper swiper-wrapper">
+                                        <div class="main__slide-ibg swiper-slide">
                                             <img src="@img/content/01.jpg" alt="01" />
                                         </div>
-                                        <div class="main-page__slide-ibg swiper-slide">
+                                        <div class="main__slide-ibg swiper-slide">
                                             <img src="@img/content/02.jpg" alt="02" />
                                         </div>
-                                        <div class="main-page__slide-ibg swiper-slide">
+                                        <div class="main__slide-ibg swiper-slide">
                                             <img src="@img/content/03.jpg" alt="03" />
                                         </div>
                                     </div>
                                 </div>
-                                <nav class="main-page__navigation">
-                                    <button type="button" class="main-page__nav main-page__nav_prev _icon-arrow"></button>
-                                    <button type="button" class="main-page__nav main-page__nav_next _icon-arrow"></button>
+                                <nav class="main__navigation">
+                                    <button type="button" class="main__nav main__nav_prev _icon-arrow"></button>
+                                    <button type="button" class="main__nav main__nav_next _icon-arrow"></button>
                                 </nav>
                             </div>
-                            <div class="main-page__block-info block-info-main">
+
+                            <div class="main__block-info block-info-main">
                                 <div class="block-info-main__top">
                                     <div class="block-info-main__price">
                                         <span>price starts as</span>
@@ -81,7 +82,7 @@
                                 </a>
                                 <a href="#" class="block-info-main__btn btn">View Other Options</a>
                             </div>
-                            <div class="main-page__map-ibg">
+                            <div class="main__map-ibg">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2229.9497175403644!2d-122.4208389268143!3d37.77538709238045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580977da59389%3A0x7add34cf07aef236!2sThe%20UPS%20Store!5e0!3m2!1sru!2sby!4v1627384470437!5m2!1sru!2sby"
                                     style="border: 0"
@@ -93,22 +94,22 @@
                     </div>
                 </section>
 
-                <section class="page__package package-page">
-                    <div class="package-page__container _container" data-watch data-watch-once>
-                        <nav class="package-page__top" data-tabs-titles>
-                            <button type="button" class="package-page__tab-link _tab-active">Package Summery</button>
-                            <button type="button" class="package-page__tab-link">Hotel Information</button>
-                            <button type="button" class="package-page__tab-link">Rooms</button>
-                            <button type="button" class="package-page__tab-link">Facilities & Activities</button>
-                            <button type="button" class="package-page__tab-link">Dining & Entertainment</button>
-                            <button type="button" class="package-page__tab-link">Reviews</button>
-                            <button type="button" class="package-page__tab-link">Questions & Answers</button>
+                <section class="page__package package">
+                    <div data-tabs class="package__container _container" data-watch data-watch-once>
+                        <nav class="package__top" data-tabs-titles>
+                            <button type="button" class="package__tab-link _tab-active">Package Summery</button>
+                            <button type="button" class="package__tab-link">Hotel Information</button>
+                            <button type="button" class="package__tab-link">Rooms</button>
+                            <button type="button" class="package__tab-link">Facilities & Activities</button>
+                            <button type="button" class="package__tab-link">Dining & Entertainment</button>
+                            <button type="button" class="package__tab-link">Reviews</button>
+                            <button type="button" class="package__tab-link">Questions & Answers</button>
                         </nav>
-                        <div class="package-page__tabs" data-tabs-body>
-                            <div class="package-page__tab-block _active">
-                                <h2 class="package-page__title">Package Summery</h2>
-                                <div class="package-page__body">
-                                    <div class="package-page__column column-package">
+                        <div class="package__tabs" data-tabs-body>
+                            <div class="package__tab-block">
+                                <h2 class="package__title">Package Summery</h2>
+                                <div class="package__body">
+                                    <div class="package__column column-package">
                                         <div class="column-package__body">
                                             <div class="column-package__top">
                                                 <h3 class="column-package__title">Package Highlights</h3>
@@ -128,7 +129,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="package-page__column column-package">
+                                    <div class="package__column column-package">
                                         <div class="column-package__body">
                                             <div class="column-package__top">
                                                 <h3 class="column-package__title">Offer Details</h3>
@@ -148,7 +149,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="package-page__column column-package column-package_big">
+                                    <div class="package__column column-package column-package_big">
                                         <div class="column-package__body" data-spollers="767.87,max" data-ope-spoller>
                                             <div class="column-package__top">
                                                 <h3 class="column-package__title">Package Summery Details</h3>
@@ -230,10 +231,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="package-page__tab-block">
-                                <h2 class="package-page__title">Hotel Information</h2>
-                                <div class="package-page__body">
-                                    <div class="package-page__column column-package">
+                            <div class="package__tab-block">
+                                <h2 class="package__title">Hotel Information</h2>
+                                <div class="package__body">
+                                    <div class="package__column column-package">
                                         <div class="column-package__body">
                                             <div class="column-package__top">
                                                 <h3 class="column-package__title">Package Highlights</h3>
@@ -253,7 +254,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="package-page__column column-package">
+                                    <div class="package__column column-package">
                                         <div class="column-package__body">
                                             <div class="column-package__top">
                                                 <h3 class="column-package__title">Offer Details</h3>
@@ -275,10 +276,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="package-page__tab-block">
-                                <h2 class="package-page__title">Rooms</h2>
-                                <div class="package-page__body">
-                                    <div class="package-page__column column-package">
+                            <div class="package__tab-block">
+                                <h2 class="package__title">Rooms</h2>
+                                <div class="package__body">
+                                    <div class="package__column column-package">
                                         <div class="column-package__body">
                                             <div class="column-package__top">
                                                 <h3 class="column-package__title">Offer Details</h3>
@@ -298,7 +299,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="package-page__column column-package">
+                                    <div class="package__column column-package">
                                         <div class="column-package__body">
                                             <div class="column-package__top">
                                                 <h3 class="column-package__title">Package Highlights</h3>
@@ -320,10 +321,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="package-page__tab-block">
-                                <h2 class="package-page__title">Facilities & Activities</h2>
-                                <div class="package-page__body">
-                                    <div class="package-page__column column-package column-package_big">
+                            <div class="package__tab-block">
+                                <h2 class="package__title">Facilities & Activities</h2>
+                                <div class="package__body">
+                                    <div class="package__column column-package column-package_big">
                                         <div class="column-package__body" data-spollers="767.87,max" data-ope-spoller>
                                             <div class="column-package__top">
                                                 <h3 class="column-package__title">Package Summery Details</h3>
@@ -404,10 +405,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="package-page__tab-block">
-                                <h2 class="package-page__title">Dining & Entertainment</h2>
-                                <div class="package-page__body">
-                                    <div class="package-page__column column-package">
+                            <div class="package__tab-block">
+                                <h2 class="package__title">Dining & Entertainment</h2>
+                                <div class="package__body">
+                                    <div class="package__column column-package">
                                         <div class="column-package__body">
                                             <div class="column-package__top">
                                                 <h3 class="column-package__title">Offer Details</h3>
@@ -427,7 +428,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="package-page__column column-package">
+                                    <div class="package__column column-package">
                                         <div class="column-package__body">
                                             <div class="column-package__top">
                                                 <h3 class="column-package__title">Package Highlights</h3>
@@ -449,10 +450,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="package-page__tab-block">
-                                <h2 class="package-page__title">Reviews</h2>
-                                <div class="package-page__body">
-                                    <div class="package-page__column column-package">
+                            <div class="package__tab-block">
+                                <h2 class="package__title">Reviews</h2>
+                                <div class="package__body">
+                                    <div class="package__column column-package">
                                         <div class="column-package__body">
                                             <div class="column-package__top">
                                                 <h3 class="column-package__title">Package Highlights</h3>
@@ -472,7 +473,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="package-page__column column-package">
+                                    <div class="package__column column-package">
                                         <div class="column-package__body">
                                             <div class="column-package__top">
                                                 <h3 class="column-package__title">Offer Details</h3>
@@ -494,10 +495,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="package-page__tab-block">
-                                <h2 class="package-page__title">Questions & Answers</h2>
-                                <div class="package-page__body">
-                                    <div class="package-page__column column-package column-package_big">
+                            <div class="package__tab-block">
+                                <h2 class="package__title">Questions & Answers</h2>
+                                <div class="package__body">
+                                    <div class="package__column column-package column-package_big">
                                         <div class="column-package__body" data-spollers="767.87,max" data-ope-spoller>
                                             <div class="column-package__top">
                                                 <h3 class="column-package__title">Package Summery Details</h3>
@@ -583,154 +584,154 @@
                     </div>
                 </section>
 
-                <section class="page__products products-page">
-                    <div class="products-page__container">
-                        <h2 class="products-page__title" data-watch data-watch-once>Other Packages</h2>
-                        <div class="products-page__body">
-                            <article class="products-page__item">
-                                <a href="#" class="products-page__image-ibg" data-watch data-watch-once>
+                <section class="page__products products">
+                    <div class="products__container">
+                        <h2 class="products__title" data-watch data-watch-once>Other Packages</h2>
+                        <div class="products__body">
+                            <article class="products__item g1">
+                                <a href="#" class="products__image-ibg" data-watch data-watch-once>
                                     <img src="@img/content/02.jpg" alt="Hotel Blue Haven" />
                                 </a>
-                                <div class="products-page__inner">
-                                    <div class="products-page__stars">
+                                <div class="products__inner">
+                                    <div class="products__stars">
                                         <span class="_icon-star"></span>
                                         <span class="_icon-star"></span>
                                         <span class="_icon-star"></span>
                                         <span class="_icon-star"></span>
                                         <span class="_icon-star"></span>
                                     </div>
-                                    <a href="#" class="products-page__subtitle">Hotel Blue Haven</a>
-                                    <p class="products-page__text">
+                                    <a href="#" class="products__subtitle">Hotel Blue Haven</a>
+                                    <p class="products__text">
                                         Aute quis duis excepteur excepteur ipsum cat eiusmod consectetur enim laborum magna llit.
                                         Ipsum est fugiat velit ea llamco do esse ut in veniam sun in onsequat. Aute quis duis
                                         epteur excepteur ipsum occaecat eiusmod nsectetur enim laborum magna mollit. Ipsum est
                                         fugiat velit ea ullamco do
                                     </p>
-                                    <div class="products-page__features">
-                                        <div class="products-page__feature _icon-map">1749 Wheeler Ridge Delaware</div>
-                                        <div class="products-page__feature _icon-user">2 x Guests</div>
-                                        <div class="products-page__feature _icon-home">1 x Room</div>
+                                    <div class="products__features">
+                                        <div class="products__feature _icon-map">1749 Wheeler Ridge Delaware</div>
+                                        <div class="products__feature _icon-user">2 x Guests</div>
+                                        <div class="products__feature _icon-home">1 x Room</div>
                                     </div>
-                                    <div class="products-page__bottom">
-                                        <div class="products-page__prices">
-                                            <div class="products-page__price products-page__price_old">$ 10,500</div>
-                                            <div class="products-page__price">$ 8,500</div>
+                                    <div class="products__bottom">
+                                        <div class="products__prices">
+                                            <div class="products__price products__price_old">$ 10,500</div>
+                                            <div class="products__price">$ 8,500</div>
                                         </div>
-                                        <a href="#" class="products-page__button btn">Book Now</a>
+                                        <a href="#" class="products__button btn">Book Now</a>
                                     </div>
                                 </div>
-                                <span class="products-page__ribbon">Flash Offer</span>
+                                <span class="products__ribbon">Flash Offer</span>
                             </article>
-                            <article class="products-page__item" data-watch data-watch-once>
-                                <a href="#" class="products-page__image-ibg">
+                            <article class="products__item g2" data-watch data-watch-once>
+                                <a href="#" class="products__image-ibg">
                                     <img src="@img/content/03.jpg" alt="LUX* Belle Mare" />
                                 </a>
-                                <div class="products-page__inner">
-                                    <a href="#" class="products-page__subtitle">LUX* Belle Mare</a>
-                                    <div class="products-page__features">
-                                        <div class="products-page__feature _icon-map">1749 Wheeler Ridge Delaware</div>
-                                        <div class="products-page__feature _icon-user">2 x Guests</div>
-                                        <div class="products-page__feature _icon-home">1 x Room</div>
+                                <div class="products__inner">
+                                    <a href="#" class="products__subtitle">LUX* Belle Mare</a>
+                                    <div class="products__features">
+                                        <div class="products__feature _icon-map">1749 Wheeler Ridge Delaware</div>
+                                        <div class="products__feature _icon-user">2 x Guests</div>
+                                        <div class="products__feature _icon-home">1 x Room</div>
                                     </div>
-                                    <div class="products-page__bottom">
-                                        <div class="products-page__prices">
-                                            <div class="products-page__price products-page__price_old">$ 8,500</div>
-                                            <div class="products-page__price">$ 3,000</div>
+                                    <div class="products__bottom">
+                                        <div class="products__prices">
+                                            <div class="products__price products__price_old">$ 8,500</div>
+                                            <div class="products__price">$ 3,000</div>
                                         </div>
-                                        <a href="#" class="products-page__button btn">Book Now</a>
+                                        <a href="#" class="products__button btn">Book Now</a>
                                     </div>
                                 </div>
-                                <span class="products-page__ribbon">Flash Offer</span>
+                                <span class="products__ribbon">Flash Offer</span>
                             </article>
-                            <article class="products-page__item" data-watch data-watch-once>
-                                <a href="#" class="products-page__image-ibg">
+                            <article class="products__item g3" data-watch data-watch-once>
+                                <a href="#" class="products__image-ibg">
                                     <img src="@img/content/04.jpg" alt="White Palace" />
                                 </a>
-                                <div class="products-page__inner">
-                                    <a href="#" class="products-page__subtitle">White Palace</a>
-                                    <div class="products-page__features">
-                                        <div class="products-page__feature _icon-map">1749 Wheeler Ridge Delaware</div>
-                                        <div class="products-page__feature _icon-user">2 x Guests</div>
-                                        <div class="products-page__feature _icon-home">1 x Room</div>
+                                <div class="products__inner">
+                                    <a href="#" class="products__subtitle">White Palace</a>
+                                    <div class="products__features">
+                                        <div class="products__feature _icon-map">1749 Wheeler Ridge Delaware</div>
+                                        <div class="products__feature _icon-user">2 x Guests</div>
+                                        <div class="products__feature _icon-home">1 x Room</div>
                                     </div>
-                                    <div class="products-page__bottom">
-                                        <div class="products-page__prices">
-                                            <div class="products-page__price products-page__price_old">$ 10,500</div>
-                                            <div class="products-page__price">$ 9,500</div>
+                                    <div class="products__bottom">
+                                        <div class="products__prices">
+                                            <div class="products__price products__price_old">$ 10,500</div>
+                                            <div class="products__price">$ 9,500</div>
                                         </div>
-                                        <a href="#" class="products-page__button btn">Book Now</a>
+                                        <a href="#" class="products__button btn">Book Now</a>
                                     </div>
                                 </div>
-                                <span class="products-page__ribbon">Flash Offer</span>
+                                <span class="products__ribbon">Flash Offer</span>
                             </article>
-                            <article class="products-page__item" data-watch data-watch-once>
-                                <a href="#" class="products-page__image-ibg">
+                            <article class="products__item g4" data-watch data-watch-once>
+                                <a href="#" class="products__image-ibg">
                                     <img src="@img/content/05.jpg" alt="Luxury Place" />
                                 </a>
-                                <div class="products-page__inner">
-                                    <a href="#" class="products-page__subtitle">Luxury Place</a>
-                                    <div class="products-page__features">
-                                        <div class="products-page__feature _icon-map">1749 Wheeler Ridge Delaware</div>
-                                        <div class="products-page__feature _icon-user">2 x Guests</div>
-                                        <div class="products-page__feature _icon-home">1 x Room</div>
+                                <div class="products__inner">
+                                    <a href="#" class="products__subtitle">Luxury Place</a>
+                                    <div class="products__features">
+                                        <div class="products__feature _icon-map">1749 Wheeler Ridge Delaware</div>
+                                        <div class="products__feature _icon-user">2 x Guests</div>
+                                        <div class="products__feature _icon-home">1 x Room</div>
                                     </div>
-                                    <div class="products-page__bottom">
-                                        <div class="products-page__prices">
-                                            <div class="products-page__price products-page__price_old">$ 4,500</div>
-                                            <div class="products-page__price">$ 2,500</div>
+                                    <div class="products__bottom">
+                                        <div class="products__prices">
+                                            <div class="products__price products__price_old">$ 4,500</div>
+                                            <div class="products__price">$ 2,500</div>
                                         </div>
-                                        <a href="#" class="products-page__button btn">Book Now</a>
+                                        <a href="#" class="products__button btn">Book Now</a>
                                     </div>
                                 </div>
-                                <span class="products-page__ribbon">Flash Offer</span>
+                                <span class="products__ribbon">Flash Offer</span>
                             </article>
-                            <article class="products-page__item" data-watch data-watch-once>
-                                <a href="#" class="products-page__image-ibg">
+                            <article class="products__item g5" data-watch data-watch-once>
+                                <a href="#" class="products__image-ibg">
                                     <img src="@img/content/06.jpg" alt="LUX* Belle Mare" />
                                 </a>
-                                <div class="products-page__inner">
-                                    <a href="#" class="products-page__subtitle">LUX* Belle Mare</a>
-                                    <div class="products-page__features">
-                                        <div class="products-page__feature _icon-map">1749 Wheeler Ridge Delaware</div>
-                                        <div class="products-page__feature _icon-user">2 x Guests</div>
-                                        <div class="products-page__feature _icon-home">1 x Room</div>
+                                <div class="products__inner">
+                                    <a href="#" class="products__subtitle">LUX* Belle Mare</a>
+                                    <div class="products__features">
+                                        <div class="products__feature _icon-map">1749 Wheeler Ridge Delaware</div>
+                                        <div class="products__feature _icon-user">2 x Guests</div>
+                                        <div class="products__feature _icon-home">1 x Room</div>
                                     </div>
-                                    <div class="products-page__bottom">
-                                        <div class="products-page__prices">
-                                            <div class="products-page__price products-page__price_old">$ 6,500</div>
-                                            <div class="products-page__price">$ 3,500</div>
+                                    <div class="products__bottom">
+                                        <div class="products__prices">
+                                            <div class="products__price products__price_old">$ 6,500</div>
+                                            <div class="products__price">$ 3,500</div>
                                         </div>
-                                        <a href="#" class="products-page__button btn">Book Now</a>
+                                        <a href="#" class="products__button btn">Book Now</a>
                                     </div>
                                 </div>
-                                <span class="products-page__ribbon">Flash Offer</span>
+                                <span class="products__ribbon">Flash Offer</span>
                             </article>
                         </div>
                     </div>
                 </section>
 
-                <section class="page__testi testi-page">
-                    <div class="testi-page__container">
-                        <h2 class="testi-page__title" data-watch data-watch-once>What people thinks about us</h2>
-                        <div class="testi-page__body">
-                            <div class="testi-page__slider swiper" data-watch data-watch-once>
-                                <div class="testi-page__wrapper swiper-wrapper">
-                                    <div class="testi-page__slide swiper-slide">
-                                        <div class="testi-page__inner">
-                                            <div class="testi-page__image-ibg">
+                <section class="page__testi testi">
+                    <div class="testi__container">
+                        <h2 class="testi__title" data-watch data-watch-once>What people thinks about us</h2>
+                        <div class="testi__body">
+                            <div class="testi__slider swiper" data-watch data-watch-once>
+                                <div class="testi__wrapper swiper-wrapper">
+                                    <div class="testi__slide swiper-slide">
+                                        <div class="testi__inner">
+                                            <div class="testi__image-ibg">
                                                 <img src="@img/avatar/02.jpg" alt="Megan Fox" />
                                             </div>
-                                            <div class="testi-page__wrapper">
-                                                <div class="testi-page__name">Megan Fox</div>
-                                                <div class="testi-page__date">Stayed 18 Nov, 2019</div>
-                                                <div class="testi-page__stars">
+                                            <div class="testi__wrapper">
+                                                <div class="testi__name">Megan Fox</div>
+                                                <div class="testi__date">Stayed 18 Nov, 2019</div>
+                                                <div class="testi__stars">
                                                     <span class="_icon-star"></span>
                                                     <span class="_icon-star"></span>
                                                     <span class="_icon-star"></span>
                                                     <span class="_icon-star"></span>
                                                     <span class="_icon-star"></span>
                                                 </div>
-                                                <p class="testi-page__text">
+                                                <p class="testi__text">
                                                     It was very nice hotel with cleanliness. Staff behavior was good and polite.
                                                     They welcome us very well. Issue was only that Lift was not in working and we
                                                     were allotted to 3rd floor and amenities articles were in corner of gallery
@@ -739,76 +740,71 @@
                                                     of the popular places but self location in a narrow street is not good.
                                                     Overall it was a good experience and could recommend.
                                                 </p>
-                                                <span class="testi-page__quotes testi-page__quotes_open _icon-quotesOpen"></span>
-                                                <span
-                                                    class="testi-page__quotes testi-page__quotes_close _icon-quotesClose"
-                                                ></span>
+                                                <span class="testi__quotes testi__quotes_open _icon-quotesOpen"></span>
+                                                <span class="testi__quotes testi__quotes_close _icon-quotesClose"></span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="testi-page__slide swiper-slide">
-                                        <div class="testi-page__inner">
-                                            <div class="testi-page__image-ibg">
+                                    <div class="testi__slide swiper-slide">
+                                        <div class="testi__inner">
+                                            <div class="testi__image-ibg">
                                                 <img src="@img/avatar/01.jpg" alt="Megan Fox" />
                                             </div>
-                                            <div class="testi-page__wrapper">
-                                                <div class="testi-page__name">Megan Fox</div>
-                                                <div class="testi-page__date">Stayed 20 Nov, 2019</div>
-                                                <div class="testi-page__stars">
+                                            <div class="testi__wrapper">
+                                                <div class="testi__name">Megan Fox</div>
+                                                <div class="testi__date">Stayed 20 Nov, 2019</div>
+                                                <div class="testi__stars">
                                                     <span class="_icon-star"></span>
                                                     <span class="_icon-star"></span>
                                                     <span class="_icon-star"></span>
                                                     <span class="_icon-star"></span>
                                                 </div>
-                                                <p class="testi-page__text">
+                                                <p class="testi__text">
                                                     to 3rd floor and amenities articles were in corner of gallery which were
                                                     giving bad feeling. Breakfast was good and support of the staff was also very
                                                     nice. Location is not good as per atmosphere, it is very nearby most of the
                                                     popular places but self location in a narrow street is not good. Overall it
                                                     was a good experience and could recommend.
                                                 </p>
-                                                <span class="testi-page__quotes testi-page__quotes_open _icon-quotesOpen"></span>
-                                                <span
-                                                    class="testi-page__quotes testi-page__quotes_close _icon-quotesClose"
-                                                ></span>
+                                                <span class="testi__quotes testi__quotes_open _icon-quotesOpen"></span>
+                                                <span class="testi__quotes testi__quotes_close _icon-quotesClose"></span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <nav class="testi-page__navigation">
-                                <button type="button" class="testi-page__nav testi-page__nav_prev _icon-arrow"></button>
-                                <button type="button" class="testi-page__nav testi-page__nav_next _icon-arrow"></button>
+                            <nav class="testi__navigation">
+                                <button type="button" class="testi__nav testi__nav_prev _icon-arrow"></button>
+                                <button type="button" class="testi__nav testi__nav_next _icon-arrow"></button>
                             </nav>
                         </div>
                     </div>
                 </section>
 
-                <section class="page__newsletter newsletter-page">
-                    <div class="newsletter-page__container">
-                        <div class="newsletter-page__body" data-watch data-watch-once>
-                            <h2 class="newsletter-page__title">
+                <section class="page__newsletter newsletter">
+                    <div class="newsletter__container">
+                        <div class="newsletter__body" data-watch data-watch-once>
+                            <h2 class="newsletter__title">
                                 subscribe to our
                                 <span>Newsletter</span>
                             </h2>
-                            <form action="#" data-dev class="newsletter-page__form">
+                            <form action="#" data-dev class="newsletter__form">
                                 <input
-                                    autocomplete="off"
                                     type="text"
                                     name="email"
                                     data-error="Error"
                                     data-required="email"
                                     placeholder="Your email address"
-                                    class="newsletter-page__input"
+                                    class="newsletter__input"
                                 />
-                                <button type="submit" class="newsletter-page__btn btn">Send</button>
+                                <button type="submit" class="newsletter__btn btn">Send</button>
                             </form>
                         </div>
                     </div>
-                    <div class="newsletter-page__image-ibg" data-watch data-watch-once>
+                    <div class="newsletter__image-ibg" data-watch data-watch-once>
                         <img src="@img/content/bg.jpg" alt="background" />
                     </div>
-                </section> -->
+                </section>
 
                 <section class="page__popular popular">
                     <div class="popular__container">

@@ -17,11 +17,7 @@
         }
     }
     @media (max-width: $mobile) {
-        font-size: rem(16);
         margin-bottom: rem(5);
-    }
-    @media (max-width: $mobileSmall) {
-        font-size: rem(20);
     }
 }
 
@@ -224,6 +220,9 @@
         line-height: 160%;
         color: $grey2;
         margin-bottom: rem(25);
+        @media (max-width: $mobileSmall) {
+            font-size: rem(16);
+        }
     }
 
     &__address,
@@ -239,7 +238,6 @@
             align-items: center;
         }
         @media (max-width: $mobileSmall) {
-            font-size: rem(18);
             &::before {
                 display: none;
             }
@@ -262,12 +260,6 @@
             @media (max-width: $mobileSmall) {
                 display: none;
             }
-        }
-    }
-
-    &__number {
-        @media (max-width: $mobileSmall) {
-            font-size: rem(18);
         }
     }
 

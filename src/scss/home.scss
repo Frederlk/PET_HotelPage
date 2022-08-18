@@ -1,8 +1,5 @@
-.main-page {
+.main {
     &__container {
-    }
-
-    &__wrapper {
     }
 
     &__top {
@@ -19,10 +16,10 @@
 
     &__stars {
         display: flex;
-        margin: 0px 0px 5px 0px;
+        gap: rem(3);
+        margin-bottom: rem(5);
         span {
             color: #f2994a;
-            margin: 0px 3px 0px 0px;
         }
     }
 
@@ -38,19 +35,19 @@
 
     &__badge {
         background-color: $red;
-        min-height: 20px;
-        min-width: 70px;
-        flex: 0 0 70px;
+        min-height: rem(20);
+        min-width: rem(70);
+        flex: 0 0 rem(70);
         display: flex;
         justify-content: center;
         align-items: center;
         color: $white;
         @extend %text_1;
-        border-radius: 3px;
-        margin: 0px 0px 0px 15px;
+        border-radius: rem(3);
+        margin-left: rem(15);
         @media (max-width: em(575)) {
             position: absolute;
-            top: -3px;
+            top: rem(-3);
             right: 0;
         }
     }
@@ -63,7 +60,7 @@
     &__link {
         &::after {
             content: "+";
-            margin: 0px 0px 0px 4px;
+            margin-left: rem(4);
         }
         &:first-child {
             &::after {
@@ -79,33 +76,33 @@
     }
 
     &__rating {
-        border-radius: 4px;
-        flex: 0 0 65px;
+        border-radius: rem(4);
+        flex: 0 0 rem(65);
         background-color: $red;
-        padding: 6px;
-        min-height: 45px;
+        padding: rem(6);
+        min-height: rem(45);
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        margin: 0px 0px 0px 30px;
+        margin-left: rem(30);
         position: relative;
         z-index: 25;
         @media (max-width: em(575)) {
             position: absolute;
-            bottom: -85px;
+            bottom: rem(-85);
             right: 0;
             margin: 0;
-            max-width: 65px;
+            max-width: rem(65);
         }
     }
 
     &__user-rating {
         font-weight: 600;
-        font-size: 8px;
+        font-size: rem(8);
         line-height: math.div(10, 8);
         color: $white;
-        margin: 0px 0px 2px 0px;
+        margin-bottom: rem(2);
     }
 
     &__number {
@@ -116,19 +113,20 @@
             @extend %text_1;
         }
     }
+
     &__body {
-        padding: 20px 0px 0px 0px;
+        margin-top: rem(20);
         display: grid;
         grid-template-columns: 65% 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: 30px;
+        gap: rem(30);
         grid-template-areas:
             "grid-3 grid-1"
             "grid-3 grid-2";
         @media (max-width: $tablet) {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: auto auto;
-            gap: 20px;
+            gap: rem(20);
             grid-template-areas:
                 "grid-3 grid-3"
                 "grid-1 grid-2";
@@ -136,7 +134,7 @@
         @media (max-width: em(575)) {
             grid-template-columns: 1fr;
             gap: 0;
-            grid-template-rows: 320px auto 250px;
+            grid-template-rows: rem(320) auto rem(250);
             grid-template-areas:
                 "grid-3"
                 "grid-1"
@@ -150,7 +148,7 @@
         position: relative;
         @media (any-hover: hover) {
             &:hover {
-                .main-page__slider-inner {
+                .main__swiper {
                     &::after {
                         opacity: 0.5;
                     }
@@ -158,19 +156,17 @@
             }
         }
         @media (max-width: em(575)) {
-            margin: 0px -15px;
+            margin: 0px rem(-15);
         }
         // @extend %no-anim;
         // transition: all 0.5s ease 1.2s;
     }
 
-    &__slider-inner {
-        height: 100%;
-        border-radius: 8px;
+    &__swiper {
         position: relative;
         overflow: hidden;
+        border-radius: rem(8);
         &::after {
-            transition: all 0.3s ease 0s;
             content: "";
             position: absolute;
             width: 100%;
@@ -180,21 +176,20 @@
             background: linear-gradient(180deg, rgba(0, 122, 223, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
             pointer-events: none;
             z-index: 23;
+            transition: opacity 0.3s ease 0s;
         }
         @media (max-width: em(575)) {
+            height: 100%;
             border-radius: 0;
-        }
-        .slick-list {
-            height: 100%;
-        }
-        .slick-track {
-            height: 100%;
         }
     }
 
-    &__slide {
-        @include adaptiveValue("height", 458, 250, 1110, 767.98, 1);
+    &__wrapper {
+    }
+
+    &__slide-ibg {
         min-height: 100%;
+        @include adaptiveValue("height", 458, 250, 991.98, 575, 1);
     }
 
     &__navigation {
@@ -207,23 +202,23 @@
         display: flex;
         justify-content: space-between;
         pointer-events: none;
-        padding: 0px 15px;
+        padding: 0px rem(15);
         @media (max-width: $mobile) {
-            padding: 0px 10px;
+            padding: 0px rem(10);
         }
     }
 
     &__nav {
-        width: 30px;
-        height: 30px;
+        width: rem(30);
+        height: rem(30);
         display: flex;
         justify-content: center;
         align-items: center;
         pointer-events: all;
         color: rgba(255, 255, 255, 0.8);
-        transition: all 0.3s ease 0s;
+        transition: color 0.3s ease 0s;
         @media (max-width: $mobile) {
-            font-size: 20px;
+            font-size: rem(20);
         }
         @media (any-hover: hover) {
             &:hover {
@@ -239,9 +234,9 @@
     }
 
     &__block-info {
-        min-height: 210px;
+        min-height: rem(210);
         grid-area: grid-1;
-        border-radius: 8px;
+        border-radius: rem(8);
         @media (max-width: em(575)) {
             margin: 0px -15px;
             border-radius: 0;
@@ -250,30 +245,29 @@
         // transition: all 0.5s ease 1.2s;
     }
 
-    &__map {
+    &__map-ibg {
         grid-area: grid-2;
-        border-radius: 10px;
+        border-radius: rem(20);
         height: 100%;
-        min-height: 210px;
+        min-height: rem(210);
         @media (max-width: em(575)) {
             border-radius: 0;
-            margin: 20px -15px 0px -15px;
+            margin: rem(20) rem(-15) 0px rem(-15);
         }
-        @extend %no-anim;
-        transition: all 0.5s ease 1.2s;
+        // @extend %no-anim;
+        // transition: all 0.5s ease 1.2s;
     }
 }
+
 .block-info-main {
     background-color: $blue;
-    &__body {
-        padding: 25px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        @media (max-width: $mobile) {
-            padding: 20px 15px;
-        }
+    padding: rem(25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    @media (max-width: $mobile) {
+        padding: rem(20) rem(15);
     }
 
     &__top {
@@ -286,35 +280,35 @@
         font-family: "Nunito";
         color: $white;
         font-weight: 800;
-        font-size: 24px;
+        font-size: rem(24);
         line-height: math.div(30, 24);
         flex: 1 1 100%;
         span {
             flex: 1 1 100%;
-            font-size: 12px;
+            font-size: rem(12);
             line-height: math.div(16, 12);
         }
     }
 
     &__features {
-        margin: 4px 0px 0px 0px;
-        flex: 0 0 80px;
+        margin-top: rem(4);
+        flex: 0 0 rem(80);
         font-family: "Nunito";
-        font-size: 12px;
+        font-size: rem(12);
         line-height: math.div(16, 12);
         color: $white;
     }
 
     &__feature {
         &:not(:last-child) {
-            margin: 0px 0px 8px 0px;
+            margin-bottom: rem(8);
         }
         span {
             display: flex;
             align-items: center;
             justify-content: space-between;
             &::before {
-                font-size: 14px;
+                font-size: rem(14);
             }
         }
     }
@@ -322,7 +316,7 @@
     &__middle {
         font-family: "Nunito";
         font-weight: 600;
-        font-size: 18px;
+        font-size: rem(18);
         line-height: math.div(25, 18);
         color: $white;
         display: flex;
@@ -330,23 +324,23 @@
         justify-content: space-between;
         span {
             display: flex;
+            gap: rem(8);
             align-items: center;
             &::before {
-                font-size: 14px;
-                margin: 0px 8px 0px 0px;
+                font-size: rem(14);
             }
         }
     }
 
     &__btn {
-        margin: 10px 0px 0px 0px;
-        min-height: 45px;
+        margin-top: rem(10);
+        min-height: rem(45);
     }
 }
 
 //========================================================================================================================================================
 
-.package-page {
+.package {
     &__container {
         // @extend %no-anim;
         // transition: all 0.5s ease 0s;
@@ -359,7 +353,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0px 0px 40px 0px;
+        margin-bottom: rem(40);
         @media (max-width: $tablet) {
             overflow: auto;
         }
@@ -370,16 +364,16 @@
         color: $darkGrey;
         @extend %text_2;
         position: relative;
-        padding: 0px 0px 18px 0px;
-        transition: all 0.3s ease 0s;
+        padding-bottom: rem(18);
+        transition: color 0.3s ease 0s;
         &::after {
             content: "";
             position: absolute;
             width: 0;
-            height: 4px;
+            height: rem(4);
             bottom: 0;
             left: 0;
-            transition: all 0.3s ease 0s;
+            transition: width 0.3s ease 0s;
             background-color: $red;
         }
         @media (any-hover: hover) {
@@ -393,11 +387,10 @@
         @media (max-width: $tablet) {
             white-space: nowrap;
             &:not(:last-child) {
-                margin: 0px 30px 0px 0px;
+                margin-right: rem(30);
             }
         }
-
-        &._active {
+        &._tab-active {
             color: $red;
             &::after {
                 width: 100%;
@@ -408,15 +401,15 @@
     &__title {
         @extend %h1;
         text-transform: uppercase;
-        margin: 0px 0px 30px 0px;
+        margin-bottom: rem(30);
     }
 
     &__body {
         display: flex;
         flex-wrap: wrap;
-        margin: 0px -16px;
+        margin: 0px rem(-16);
         @media (max-width: $tablet) {
-            margin: 0px -10px;
+            margin: 0px rem(-10);
         }
     }
 
@@ -426,11 +419,11 @@
 
 .column-package {
     flex: 0 1 50%;
-    margin: 0px 0px 32px 0px;
-    padding: 0px 16px;
+    margin-bottom: rem(32);
+    padding: 0px rem(16);
     @media (max-width: $tablet) {
-        padding: 0px 10px;
-        margin: 0px 0px 20px 0px;
+        padding: 0px rem(10);
+        margin-bottom: rem(20);
     }
     @media (max-width: em(575)) {
         flex: 1 1 100%;
@@ -448,7 +441,7 @@
 
     &__body {
         background-color: $white;
-        border-radius: 4px 4px 8px 8px;
+        border-radius: rem(4) rem(4) rem(8) rem(8);
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -457,7 +450,7 @@
 
     &__top {
         background-color: $blue;
-        padding: 16px 24px;
+        padding: rem(16) rem(24);
     }
 
     &__title {
@@ -468,70 +461,70 @@
 
     &__inner {
         flex: 1 1 auto;
-        padding: 25px;
+        padding: rem(25);
         display: flex;
         flex-wrap: wrap;
-        margin: 0px -20px;
+        margin: 0px rem(-20);
         &_big {
-            border-top: 1px dashed #e0e0e0;
+            border-top: rem(1) dashed #e0e0e0;
             @media (min-width: $tablet) {
-                padding: 30px 25px 60px 25px;
+                padding: rem(30) rem(25) rem(60) rem(25);
             }
         }
         &_big-top {
             @media (min-width: $tablet) {
-                padding: 40px 25px 40px 25px;
+                padding: rem(40) rem(25);
             }
         }
         @media (max-width: $tablet) {
-            margin: 0px -10px;
+            margin: 0px rem(-10);
         }
     }
 
     &__column {
         flex: 0 1 50%;
-        padding: 0px 20px;
+        padding: 0px rem(20);
         @media (max-width: $tablet) {
             flex: 1 1 100%;
+            padding: 0px rem(10);
             &:not(:last-child) {
-                margin: 0px 0px 20px 0px;
+                margin-bottom: rem(20);
             }
-            padding: 0px 10px;
         }
         @media (max-width: $mobile) {
             &:not(:last-child) {
-                margin: 0px 0px 0px 0px;
+                margin: 0;
             }
         }
     }
     &__wrapper {
-        padding: 0px 0px 10px 0px;
+        padding-bottom: rem(10);
     }
 
     &__item {
         display: flex;
         @extend %text_3;
-        margin: 0px 0px 20px 0px;
+        margin-bottom: rem(20);
         &::before {
             display: flex;
             justify-content: center;
             align-items: center;
-            flex: 0 0 18px;
-            font-size: 9px;
-            width: 18px;
-            height: 18px;
+            flex: 0 0 rem(18);
+            font-size: rem(9);
+            width: rem(18);
+            height: rem(18);
             background-color: $blue;
             border-radius: 50%;
             color: $white;
-            margin: -1px 20px 0px 0px;
+            margin: rem(-1) rem(20) 0px 0px;
             @media (max-width: $mobile) {
-                margin: 0px 10px 0px 0px;
+                margin: 0px rem(10) 0px 0px;
             }
         }
         &._icon-schedule {
             &::before {
                 background-color: transparent;
-                font-size: 18px;
+                font-size: rem(18);
                 color: $blue;
             }
         }
@@ -540,49 +533,48 @@
     &__tip {
         flex: 1 1 100%;
         @extend %text_3;
-        padding: 0px 20px;
-        transform: translate(35px, 20px);
-        @media (max-width: $tablet) {
-            padding: 0;
+        transform: translate(rem(35), rem(20));
+        @media (min-width: $tablet) {
+            padding: 0px rem(20);
         }
         @media (max-width: em(575)) {
-            transform: translate(35px, 0px);
+            transform: translate(rem(35), 0px);
         }
     }
 
     &__subtitle {
+        position: relative;
         font-weight: 600;
-        font-size: 13px;
+        font-size: rem(13);
         line-height: math.div(16, 13);
         color: $red;
-        margin: 0px 0px 20px 0px;
-        position: relative;
-        padding: 0px 30px 0px 0px;
+        margin-bottom: rem(20);
+        padding-right: rem(30);
         @media (max-width: $mobile) {
             &::after {
                 content: "";
-                width: 16px;
-                height: 2px;
+                width: rem(16);
+                height: rem(2);
                 background-color: $blue;
                 position: absolute;
                 top: 50%;
                 right: 0;
-                transition: all 0.3s ease 0s;
+                transition: background-color 0.3s ease 0s;
                 transform: translate(0px, -50%);
             }
             &::before {
                 content: "";
-                width: 2px;
-                height: 16px;
+                width: rem(2);
+                height: rem(16);
                 background-color: $blue;
                 position: absolute;
                 top: 50%;
-                right: 7px;
-                transition: all 0.3s ease 0s;
+                right: rem(7);
+                transition: background-color 0.3s ease 0s, height 0.3s ease 0s;
                 transform: translate(0px, -50%);
             }
         }
-        &._active {
+        &._spoller-active {
             &::before {
                 height: 0;
                 background-color: $red;
@@ -596,7 +588,7 @@
 
 //========================================================================================================================================================
 
-.products-page {
+.products {
     &__container {
     }
 
@@ -615,83 +607,22 @@
     }
 
     &__body {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0px -15px;
-        @media (max-width: $mobile) {
-            margin: 0px -10px;
-        }
-    }
-
-    &__column {
-        padding: 0px 15px;
-        flex: 0 1 33.333%;
-        margin: 0px 0px 30px 0px;
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        @include adaptiveValue("gap", 30, 20, 1110, 767.98, 1);
+        grid-template-areas:
+            "g1 g1 g2"
+            "g3 g4 g5";
         @media (max-width: $tablet) {
-            flex: 0 1 50%;
-        }
-        @media (max-width: $mobile) {
-            margin: 0px 0px 20px 0px;
-            padding: 0px 10px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "g1 g1"
+                "g2 g3"
+                "g4 g5";
         }
         @media (max-width: em(575)) {
-            flex: 1 1 100%;
-        }
-        &:first-child {
-            flex: 0 1 66.666%;
-            @media (max-width: $tablet) {
-                flex: 1 1 100%;
-            }
-            .products-page__item {
-                @media (min-width: em(575)) {
-                    display: flex;
-                    height: 100%;
-                    justify-content: space-between;
-                }
-            }
-            .products-page__image {
-                @media (min-width: em(575)) {
-                    flex: 0 1 50%;
-                }
-            }
-            .products-page__inner {
-                @media (min-width: $mobile) {
-                    padding: 46px 20px 30px 46px;
-                }
-                @media (min-width: em(575)) {
-                    flex: 0 1 50%;
-                }
-            }
-            .products-page__stars {
-                display: flex;
-            }
-            .products-page__text {
-                display: block;
-            }
-            .products-page__features {
-                @include adaptiveValue("margin-bottom", 55, 35, 1110, 767.98, 1);
-            }
-            .products-page__ribbon {
-                min-height: 30px;
-                min-width: 95px;
-                font-weight: 600;
-                @extend %text_3;
-            }
-        }
-        &:not(:first-child) {
-            .products-page__item {
-                display: flex;
-                flex-direction: column;
-                height: 100%;
-            }
-            .products-page__inner {
-                flex: 1 1 auto;
-            }
-        }
-        @extend %no-anim;
-        transition: all 0.5s ease 0s;
-        &._animate {
-            @extend %anim;
+            display: block;
         }
     }
 
@@ -699,15 +630,83 @@
         position: relative;
         overflow: hidden;
         background-color: $blue;
-        border-radius: 8px;
+        border-radius: rem(8);
+        &.g1 {
+            grid-area: g1;
+        }
+        &.g2 {
+            grid-area: g2;
+        }
+        &.g3 {
+            grid-area: g3;
+        }
+        &.g4 {
+            grid-area: g4;
+        }
+        &.g5 {
+            grid-area: g5;
+        }
+        &:first-child {
+            @media (min-width: em(575)) {
+                display: flex;
+                height: 100%;
+                justify-content: space-between;
+            }
+            .products__image-ibg {
+                @media (min-width: em(575)) {
+                    flex: 0 1 50%;
+                }
+            }
+            .products__inner {
+                @media (min-width: $mobile) {
+                    padding: rem(46) rem(20) rem(30) rem(46);
+                }
+                @media (min-width: em(575)) {
+                    flex: 0 1 50%;
+                }
+            }
+            .products__stars {
+                display: flex;
+            }
+            .products__text {
+                display: block;
+            }
+            .products__features {
+                @include adaptiveValue("margin-bottom", 55, 35, 1110, 767.98, 1);
+            }
+            .products__ribbon {
+                min-height: rem(30);
+                min-width: rem(95);
+                font-weight: 600;
+                @extend %text_3;
+            }
+        }
+        &:not(:first-child) {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            .products__inner {
+                flex: 1 1 auto;
+            }
+        }
+        @media (max-width: em(575)) {
+            &:not(:last-child) {
+                margin-bottom: rem(20);
+            }
+        }
+        // @extend %no-anim;
+        // transition: all 0.5s ease 0s;
+        // &._animate {
+        //     @extend %anim;
+        // }
     }
 
-    &__image {
+    &__image-ibg {
         display: flex;
         padding-bottom: rem(250);
         overflow: hidden;
         img {
-            transition: all 0.3s ease 0s;
+            transition: transform 0.3s ease 0s;
         }
         @media (any-hover: hover) {
             &:hover {
@@ -719,24 +718,22 @@
     }
 
     &__inner {
-        padding: 30px 20px 30px 30px;
+        padding: rem(30) rem(20) rem(30) rem(30);
         display: flex;
         flex-direction: column;
         height: 100%;
         @media (max-width: $mobile) {
-            padding: 15px;
+            padding: rem(20);
         }
     }
     &__stars {
         display: none;
         align-items: center;
-        margin: 0px 0px 5px 0px;
+        gap: rem(3);
+        margin-bottom: rem(5);
         span {
             color: #f2994a;
-            font-size: 8px;
-            &:not(:last-child) {
-                margin: 0px 3px 0px 0px;
-            }
+            font-size: rem(8);
         }
     }
 
@@ -744,7 +741,7 @@
         flex: 1 1 auto;
         display: inline-flex;
         font-weight: 700;
-        font-size: 18px;
+        font-size: rem(18);
         line-height: math.div(23, 18);
         color: $white;
         @include adaptiveValue("margin-bottom", 25, 15, 1110, 767.98, 1);
@@ -772,12 +769,12 @@
         display: flex;
         align-items: center;
         &:not(:last-child) {
-            margin: 0px 0px 11px 0px;
+            margin-bottom: rem(11);
         }
         &::before {
-            flex: 0 0 14px;
-            font-size: 14px;
-            margin: 0px 15px 0px 0px;
+            flex: 0 0 rem(14);
+            font-size: rem(14);
+            margin-right: rem(15);
         }
     }
 
@@ -793,15 +790,15 @@
 
     &__price {
         font-weight: 700;
-        font-size: 24px;
+        font-size: rem(24);
         line-height: math.div(30, 24);
         color: $white;
         &_old {
             position: absolute;
-            top: -5px;
+            top: rem(-5);
             transform: translate(0px, -100%);
             left: 0;
-            font-size: 14px;
+            font-size: rem(14);
             line-height: math.div(18, 14);
             font-weight: 400;
             text-decoration-line: line-through;
@@ -809,37 +806,35 @@
     }
 
     &__button {
-        min-width: 120px;
-        min-height: 40px;
+        min-width: rem(120);
+        min-height: rem(40);
     }
 
     &__ribbon {
         position: absolute;
-        border-radius: 0px 4px 4px 0px;
+        border-radius: 0px rem(4) rem(4) 0px;
         background-color: $red;
-        padding: 4px 9px;
-        top: 26px;
+        padding: rem(4) rem(9);
+        top: rem(26);
         left: 0px;
         font-weight: 600;
-        font-size: 8px;
+        font-size: rem(8);
         line-height: math.div(10, 8);
         color: $white;
         display: flex;
         justify-content: center;
         align-items: center;
-        @media (max-width: $mobile) {
-        }
-        min-height: 30px;
-        min-width: 95px;
+        min-height: rem(30);
+        min-width: rem(95);
         font-weight: 600;
-        font-size: 12px;
+        font-size: rem(12);
         line-height: math.div(15, 12);
     }
 }
 
 //========================================================================================================================================================
 
-.testi-page {
+.testi {
     &__container {
     }
 
@@ -860,12 +855,12 @@
     &__body {
         position: relative;
         @media (max-width: $mobile) {
-            margin: 0px -15px;
+            margin: 0px rem(-15);
         }
     }
 
     &__slider {
-        overflow: visible;
+        overflow: visible !important;
         // @extend %no-anim;
         // transition: all 0.5s ease 0s;
         // &._animate {
@@ -876,12 +871,12 @@
     &__slide {
         display: flex;
         justify-content: center;
-        transition: all 0.8s ease 0s;
-        &.slick-slide {
+        transition: opacity 0.8s ease 0s, visibility 0.8s ease 0s;
+        &.swiper-slide {
             opacity: 0;
             visibility: hidden;
         }
-        &.slick-current {
+        &.swiper-slide-active {
             opacity: 1;
             visibility: visible;
         }
@@ -892,59 +887,59 @@
         position: relative;
         z-index: 2;
         background-color: $white;
-        border-radius: 8px;
-        padding: 0px 95px 30px 95px;
-        flex: 0 1 730px;
+        padding: 0px rem(95) rem(30) rem(95);
+        flex: 0 1 rem(730);
         @media (max-width: $tablet) {
             flex: 1 1 100%;
-            padding: 0px 45px 15px 45px;
+            padding: 0px rem(45) rem(15) rem(45);
         }
-        @media (max-width: $mobile) {
-            border-radius: 0px;
+        @media (min-width: $mobile) {
+            border-radius: rem(8);
         }
     }
 
-    &__image {
-        height: 90px;
-        width: 90px;
+    &__image-ibg {
+        height: rem(90);
+        width: rem(90);
         overflow: hidden;
         border-radius: 50%;
         margin: 0 auto;
         transform: translate(0, -50%);
     }
+
     &__wrapper {
-        margin: -35px 0px 0px 0px;
+        @media (min-width: $tablet) {
+            margin-top: rem(-35);
+        }
     }
 
     &__name {
         font-weight: 700;
         @extend %text_3;
         color: $red;
-        margin: 0px 0px 10px 0px;
+        margin-bottom: rem(10);
     }
 
     &__date {
-        font-size: 10px;
+        font-size: rem(10);
         line-height: math.div(13, 10);
         color: $black;
-        margin: 0px 0px 4px 0px;
+        margin-bottom: rem(4);
     }
 
     &__stars {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0px 0px 30px 0px;
+        gap: rem(3);
+        margin-bottom: rem(30);
         span {
             color: #f2994a;
-            &:not(:last-child) {
-                margin: 0px 3px 0px 0px;
-            }
         }
     }
 
     &__text {
-        font-size: 12px;
+        font-size: rem(12);
         line-height: 160%;
         text-align: justify;
     }
@@ -958,23 +953,23 @@
         align-items: center;
         justify-content: space-between;
         transform: translate(0px, -50%);
-        padding: 0px 18px;
+        padding: 0px rem(18);
         @media (max-width: $tablet) {
-            padding: 0px 5px;
+            padding: 0px rem(5);
         }
         @media (max-width: $mobile) {
-            padding: 0px 0px;
+            padding: 0px;
         }
     }
 
     &__nav {
-        width: 30px;
-        height: 30px;
+        width: rem(30);
+        height: rem(30);
         display: flex;
         justify-content: center;
         align-items: center;
         color: #828282;
-        font-size: 17px;
+        font-size: rem(17);
         transition: color 0.3s ease 0s;
         @media (any-hover: hover) {
             &:hover {
@@ -994,15 +989,15 @@
         z-index: 1;
         position: absolute;
         color: hsla(0, 0%, 95%, 0.4);
-        font-size: 48px;
+        font-size: rem(48);
         &_open {
-            top: 12px;
+            top: rem(12);
             @include adaptiveValue("left", 65, 20, 1110, 767.98, 1);
         }
 
         &_close {
-            bottom: 110px;
-            right: 60px;
+            bottom: rem(110);
+            right: rem(60);
             @include adaptiveValue("right", 60, 20, 1110, 767.98, 1);
             @include adaptiveValue("bottom", 110, 20, 1110, 767.98, 1);
         }
@@ -1011,13 +1006,9 @@
 
 //========================================================================================================================================================
 
-.newsletter-page {
+.newsletter {
     position: relative;
-    &__wrapper {
-        overflow: hidden;
-        position: relative;
-    }
-
+    overflow: hidden;
     &__container {
         position: relative;
         z-index: 2;
@@ -1040,54 +1031,66 @@
 
     &__title {
         font-weight: 300;
-        font-size: 24px;
+        font-size: rem(24);
         line-height: math.div(30, 24);
         color: $white;
-        @include adaptiveValue("margin-right", 140, 60, 1110, 767.98, 1);
-        @media (max-width: $mobile) {
-            margin: 0px 0px 20px 0px;
-        }
         span {
             font-weight: 600;
-            font-size: 36px;
+            font-size: rem(36);
             line-height: math.div(45, 36);
             text-transform: uppercase;
             display: block;
+        }
+        @media (min-width: $mobile) {
+            @include adaptiveValue("margin-right", 140, 60, 1110, 767.98, 1);
+        }
+        @media (max-width: $mobile) {
+            margin-bottom: rem(20);
         }
     }
 
     &__form {
         display: flex;
         align-items: center;
+        position: relative;
+        .form__error {
+            position: absolute;
+            margin-top: rem(5);
+            top: 100%;
+            left: 0;
+            @extend %text_2;
+            color: $red;
+        }
     }
 
     &__input {
-        padding: 5px 20px 5px 35px;
-        min-height: 55px;
-        flex: 0 1 285px;
+        padding: rem(5) rem(20) rem(5) rem(35);
+        min-height: rem(55);
+        flex: 0 1 rem(285);
         font-weight: 300;
         @extend %text_2;
-        color: #bdbdbd;
-        border-radius: 4px 0px 0px 4px;
+        color: $grey2;
+        border-radius: rem(4) 0px 0px rem(4);
+        &:focus-visible {
+            outline-offset: rem(-1);
+            color: $darkGrey;
+            outline: white solid rem(1);
+        }
         @media (min-width: $mobile) {
-            min-width: 285px;
+            min-width: rem(285);
         }
         @media (max-width: $mobile) {
             flex: 1 1 auto;
         }
-        &._focus {
-            color: $darkGrey;
-        }
     }
 
     &__btn {
-        flex: 0 1 65px;
-        min-height: 65px;
-        min-height: 55px;
-        border-radius: 0px 4px 4px 0px;
+        flex: 0 1 rem(65);
+        min-height: rem(55);
+        border-radius: 0px rem(4) rem(4) 0px;
     }
 
-    &__image {
+    &__image-ibg {
         position: absolute;
         width: 100%;
         height: 200%;
