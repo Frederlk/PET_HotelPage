@@ -9,19 +9,19 @@
     }
 
     &__top {
-        // @extend %no-anim;
-        // transition: all 0.5s ease 0s;
+        @extend %no-anim;
+        transition: all 0.5s ease 0s;
     }
 
     &__middle {
-        // @extend %no-anim;
-        // transition: all 0.5s ease 0.3s;
+        @extend %no-anim;
+        transition: all 0.5s ease 0.3s;
     }
 
     &__bottom {
         background-color: $blue;
-        // @extend %no-anim;
-        // transition: all 0.5s ease 0.6s;
+        @extend %no-anim;
+        transition: all 0.5s ease 0.6s;
     }
 }
 

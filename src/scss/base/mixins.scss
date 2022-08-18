@@ -99,24 +99,6 @@
 }
 
 //========================================================================================================================================================
-@mixin inViewBasic($startPosX, $startPosY, $speed, $delay, $child: false) {
-    transform: translate($startPosX, $startPosY);
-    transition: transform #{$speed}s ease #{$delay}s, opacity #{$speed}s ease #{$delay}s;
-    opacity: 0;
-    @if ($child == true) {
-        ._watcher-view & {
-            opacity: 1 !important;
-            transform: translate(0px, 0px) !important;
-        }
-    } @else {
-        &._watcher-view {
-            opacity: 1 !important;
-            transform: translate(0px, 0px) !important;
-        }
-    }
-}
-
-//========================================================================================================================================================
 
 @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
     // For Google Chrome

@@ -17,10 +17,13 @@
     font-size: rem(24);
     line-height: math.div(30, 24);
 }
+
 %no-anim {
     visibility: hidden;
     opacity: 0;
+    transition: opacity 0.5s ease 0s, visibility 0.5s ease 0s;
 }
+
 %anim {
     visibility: visible;
     opacity: 1;
@@ -29,8 +32,8 @@
 //========================================================================================================================================================
 
 .pagination {
-    // @extend .no-anim;
-    // transition: all 0.5s ease 0.8s;
+    @extend %no-anim;
+    transition: visibility 0.5s ease 0.8s, opacity 0.5s ease 0.8s;
     &__item {
         color: $blue;
         @extend %text_1;

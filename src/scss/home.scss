@@ -7,8 +7,8 @@
         align-items: center;
         justify-content: space-between;
         position: relative;
-        // @extend %no-anim;
-        // transition: all 0.5s ease 1s;
+        @extend %no-anim;
+        transition: opacity 0.5s ease 1s, visibility 0.5s ease 1s;
     }
 
     &__info {
@@ -158,8 +158,8 @@
         @media (max-width: em(575)) {
             margin: 0px rem(-15);
         }
-        // @extend %no-anim;
-        // transition: all 0.5s ease 1.2s;
+        @extend %no-anim;
+        transition: opacity 0.5s ease 1.2s, visibility 0.5s ease 1.2s;
     }
 
     &__swiper {
@@ -241,8 +241,8 @@
             margin: 0px -15px;
             border-radius: 0;
         }
-        // @extend %no-anim;
-        // transition: all 0.5s ease 1.2s;
+        @extend %no-anim;
+        transition: opacity 0.5s ease 1.2s, visibility 0.5s ease 1.2s;
     }
 
     &__map-ibg {
@@ -254,8 +254,8 @@
             border-radius: 0;
             margin: rem(20) rem(-15) 0px rem(-15);
         }
-        // @extend %no-anim;
-        // transition: all 0.5s ease 1.2s;
+        @extend %no-anim;
+        transition: opacity 0.5s ease 1.2s, visibility 0.5s ease 1.2s;
     }
 }
 
@@ -342,11 +342,10 @@
 
 .package {
     &__container {
-        // @extend %no-anim;
-        // transition: all 0.5s ease 0s;
-        // &._animate {
-        //     @extend %anim;
-        // }
+        @extend %no-anim;
+        &._watcher-view {
+            @extend %anim;
+        }
     }
 
     &__top {
@@ -599,11 +598,10 @@
         text-align: center;
         text-transform: uppercase;
         @include adaptiveValue("margin-bottom", 65, 25, 1110, 767.98, 1);
-        // @extend %no-anim;
-        // transition: all 0.5s ease 0s;
-        // &._animate {
-        //     @extend %anim;
-        // }
+        @extend %no-anim;
+        &._watcher-view {
+            @extend %anim;
+        }
     }
 
     &__body {
@@ -694,11 +692,10 @@
                 margin-bottom: rem(20);
             }
         }
-        // @extend %no-anim;
-        // transition: all 0.5s ease 0s;
-        // &._animate {
-        //     @extend %anim;
-        // }
+        @extend %no-anim;
+        &._watcher-view {
+            @extend %anim;
+        }
     }
 
     &__image-ibg {
@@ -845,11 +842,10 @@
         text-align: center;
         text-transform: uppercase;
         @include adaptiveValue("margin-bottom", 115, 60, 1110, 767.98, 1);
-        // @extend %no-anim;
-        // transition: all 0.5s ease 0s;
-        // &._animate {
-        //     @extend %anim;
-        // }
+        @extend %no-anim;
+        &._watcher-view {
+            @extend %anim;
+        }
     }
 
     &__body {
@@ -860,12 +856,11 @@
     }
 
     &__slider {
+        @extend %no-anim;
         overflow: visible !important;
-        // @extend %no-anim;
-        // transition: all 0.5s ease 0s;
-        // &._animate {
-        //     @extend %anim;
-        // }
+        &._watcher-view {
+            @extend %anim;
+        }
     }
 
     &__slide {
@@ -1022,11 +1017,10 @@
             align-items: center;
             justify-content: center;
         }
-        // @extend %no-anim;
-        // transition: all 0.5s ease 0.3s;
-        // &._animate {
-        //     @extend %anim;
-        // }
+        @extend %no-anim;
+        &._watcher-view {
+            @extend %anim;
+        }
     }
 
     &__title {
@@ -1105,11 +1099,10 @@
             left: 0;
             background: rgba(10, 34, 61, 0.8);
         }
-        // @extend %no-anim;
-        // transition: all 0.5s ease 0s;
-        // &._animate {
-        //     @extend %anim;
-        // }
+        @extend %no-anim;
+        &._watcher-view {
+            @extend %anim;
+        }
     }
 }
 
@@ -1124,11 +1117,10 @@
         text-transform: uppercase;
         color: $black;
         @include adaptiveValue("margin-bottom", 60, 20, 1110, 767.98, 1);
-        // @extend %no-anim;
-        // transition: all 0.5s ease 0s;
-        // &._animate {
-        //     @extend %anim;
-        // }
+        @extend %no-anim;
+        &._watcher-view {
+            @extend %anim;
+        }
     }
 
     &__body {
@@ -1157,11 +1149,11 @@
                     }
                 }
             }
-        } // @extend %no-anim;
-        // transition: all 0.5s ease 0s;
-        // &._animate {
-        //     @extend %anim;
-        // }
+        }
+        @extend %no-anim;
+        &._watcher-view {
+            @extend %anim;
+        }
     }
 
     &__content {

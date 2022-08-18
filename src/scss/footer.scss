@@ -31,25 +31,22 @@
     }
 
     &__top {
-        // @extend %no-anim;
-        // transition: all 0.5s ease 0s;
-        // &._animate {
-        //     @extend %anim;
-        // }
+        @extend %no-anim;
+        &._watcher-view {
+            @extend %anim;
+        }
     }
     &__bottom {
-        // @extend %no-anim;
-        // transition: all 0.5s ease 0s;
-        // &._animate {
-        //     @extend %anim;
-        // }
+        @extend %no-anim;
+        &._watcher-view {
+            @extend %anim;
+        }
     }
     &__copy {
-        // @extend %no-anim;
-        // transition: all 0.5s ease 0s;
-        // &._animate {
-        //     @extend %anim;
-        // }
+        @extend %no-anim;
+        &._watcher-view {
+            @extend %anim;
+        }
     }
 }
 
