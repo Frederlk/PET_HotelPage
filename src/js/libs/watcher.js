@@ -31,7 +31,6 @@ class ScrollWatcher {
     // Конструктор наблюдателей
     scrollWatcherConstructor(items) {
         if (items.length) {
-            this.scrollWatcherLogging(`Проснулся, слежу за объектами (${items.length})...`);
             // Уникализируем параметры
             let uniqParams = uniqArray(
                 Array.from(items).map(function (item) {
